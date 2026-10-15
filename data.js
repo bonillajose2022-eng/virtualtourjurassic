@@ -1,6 +1,6 @@
 // Edit this file to change learning content. English practice is kept in both modes.
 export const species = {
- triceratops: {name:'Triceratops',period:['Late Cretaceous · 68–66 million years ago','Cretácico tardío · hace 68–66 millones de años'],model:null,length:9,facts:['This is a Triceratops. It is a herbivore. Its horns are long. It has three facial horns and a bony frill.','Its legs are strong. It eats plants.'],es:['Este es un Triceratops. Es herbívoro. Tiene tres cuernos faciales y una gola ósea.','Sus patas son fuertes. Come plantas.'],vocab:[['horn','cuerno'],['frill','gola ósea'],['strong','fuerte']],source:'https://www.nhm.ac.uk/discover/dino-directory/triceratops.html'},
+ triceratops: {name:'Triceratops',period:['Late Cretaceous · 68–66 million years ago','Cretácico tardío · hace 68–66 millones de años'],model:'./triceratops.glb',length:9,facts:['This is a Triceratops. It is a herbivore. Its horns are long. It has three facial horns and a bony frill.','Its legs are strong. It eats plants.'],es:['Este es un Triceratops. Es herbívoro. Tiene tres cuernos faciales y una gola ósea.','Sus patas son fuertes. Come plantas.'],vocab:[['horn','cuerno'],['frill','gola ósea'],['strong','fuerte']],source:'https://www.nhm.ac.uk/discover/dino-directory/triceratops.html'},
  stegosaurus: {name:'Stegosaurus',period:['Late Jurassic · about 155–145 million years ago','Jurásico tardío · hace unos 155–145 millones de años'],model:null,length:9,facts:['This is a Stegosaurus. It is a herbivore. Its plates are large. It has spikes on its tail.','It eats plants. Its head is small.'],es:['Este es un Stegosaurus. Es herbívoro. Tiene placas grandes y púas en la cola.','Come plantas. Su cabeza es pequeña.'],vocab:[['plate','placa'],['tail','cola'],['spike','púa']],source:'https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html'},
  trex: {name:'Tyrannosaurus rex',period:['Late Cretaceous · 68–66 million years ago','Cretácico tardío · hace 68–66 millones de años'],model:'./trex.glb',length:12,facts:['The T. rex eats meat. It walks on two legs. It has sharp teeth.','It does not eat plants as its main food. Fossils show evidence of feeding on other dinosaurs; it probably both hunted and scavenged.'],es:['El T. rex come carne. Camina en dos patas y tiene dientes afilados.','Los fósiles muestran que comía otros dinosaurios. Probablemente cazaba y también aprovechaba carroña.'],vocab:[['teeth','dientes'],['meat','carne'],['walk','caminar']],source:'https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html'},
  brachiosaurus: {name:'Brachiosaurus',period:['Late Jurassic · about 155–150 million years ago','Jurásico tardío · hace unos 155–150 millones de años'],model:null,length:25,facts:["The Brachiosaurus doesn't eat meat. It eats plants. It has a long neck.",'Its front legs are longer than its back legs. It is a sauropod. Its exact speed and daily routines are uncertain.'],es:['El Brachiosaurus no come carne. Come plantas y tiene un cuello largo.','Sus patas delanteras son más largas. Es un saurópodo. No conocemos con certeza su velocidad ni sus rutinas diarias.'],vocab:[['neck','cuello'],['plants','plantas'],['long','largo']],source:'https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html'}
@@ -45,5 +45,63 @@ export const copy={
 export function normalize(s){return s.toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?]/g,'').replace(/\s+/g,' ').trim();}
 export function isCorrect(question,value){return question.type==='text'?normalize(String(value))===normalize(question.answer):value===question.answer;}
 export function scoreAnswers(answers){return finalQuestions.reduce((n,q)=>n+(isCorrect(q,answers[q.id])?1:0),0);}
-export function defaultState(){return {version:1,lang:0,zone:0,selected:'triceratops',xp:0,completed:[],solved:[],discovered:[],secret:false,finalAnswers:{},finalIndex:0,result:null,name:'',settings:{quality:'medium',sound:false,subtitles:true,motion:!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,field:false,cycle:false}};}
+export function defaultState(){return {version:1,lang:0,period:'cretaceous',zone:0,selected:'triceratops',xp:0,completed:[],solved:[],discovered:[],secret:false,finalAnswers:{},finalIndex:0,result:null,name:'',settings:{quality:'medium',sound:false,subtitles:true,motion:!globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches,field:false,cycle:false}};}
 export function hydrate(raw){const base=defaultState();if(!raw||raw.version!==1)return base;return {...base,...raw,lang:raw.lang===1?1:0,zone:Math.max(0,Math.min(4,Number(raw.zone)||0)),completed:Array.isArray(raw.completed)?raw.completed.filter(n=>Number.isInteger(n)&&n>=0&&n<5):[],solved:Array.isArray(raw.solved)?raw.solved.filter(x=>typeof x==='string'):[],discovered:Array.isArray(raw.discovered)?raw.discovered.filter(x=>species[x]):[],settings:{...base.settings,...raw.settings}};}
+
+// Open-world update: published models retain their authors and source licences.
+species.triceratops.credit='TRICERA · seth the yutyrannus; original model credited to rroobboo 999 · CC BY 4.0';
+species.triceratops.modelSource='https://sketchfab.com/3d-models/tricera-6b0695ecb40a40dabd4f118ee4b729cd';
+species.stegosaurus.credit='STEGO · seth the yutyrannus; original model credited to rroobboo 999 · CC BY 4.0';
+species.stegosaurus.modelSource='https://sketchfab.com/3d-models/stego-b07eb05fa95c413bb928eb2ffbdc9523';
+species.trex.credit='Animated T-Rex Dinosaur Biting Attack Loop · LasquetiSpice · CC BY 4.0';
+species.trex.modelSource='https://sketchfab.com/3d-models/animated-t-rex-dinosaur-biting-attack-loop-5bbcadb7d9274843abb5ada35767dba1';
+species.allosaurus={name:'Allosaurus',period:['Late Jurassic · about 152–145 million years ago','Jurásico tardío · hace unos 152–145 millones de años'],model:'./allosaurus.glb',length:8.5,facts:['This is an Allosaurus. It eats meat. It has sharp teeth.','It walks on two legs. It does not eat plants as its main food.'],es:['Este es un Allosaurus. Come carne y tiene dientes afilados.','Camina en dos patas. Las plantas no son su alimento principal.'],vocab:[['meat','carne'],['teeth','dientes'],['legs','patas']],source:'https://www.nhm.ac.uk/discover/dino-directory/allosaurus.html',credit:'Allosaurus · seth the yutyrannus; original credited to dead tubby · CC BY 4.0',modelSource:'https://sketchfab.com/3d-models/allosaurus-02e651e39fed47bbaec0aa0546f17fd3'};
+export const periods={cretaceous:{name:['Late Cretaceous','Cretácico tardío'],date:'68–66 Ma',species:['triceratops','trex']},jurassic:{name:['Late Jurassic','Jurásico tardío'],date:'155–145 Ma',species:['stegosaurus','allosaurus']}};
+export function speciesPeriod(key){return ['stegosaurus','allosaurus','brachiosaurus'].includes(key)?'jurassic':'cretaceous';}
+export const encounterQuestions={};
+function easy(id,group,prompt,translation,options,answer,hint,why){return {id,group,prompt,translation,options,answer,hint,explain:[why.en,why.es]};}
+const e=easy;
+const easyBank=[
+ e('easy-b1','be','It ___ a dinosaur.','Es un dinosaurio.',['is','are'],0,'It significa él/ella para un animal. Con it usamos is.',{en:'Use is with it: It is a dinosaur.',es:'Con it usamos is: It is a dinosaur.'}),
+ e('easy-b2','be','I ___ an explorer.','Yo soy un explorador.',['am','is'],0,'Con I (yo) usamos am.',{en:'I goes with am.',es:'I siempre se acompaña de am.'}),
+ e('easy-b3','be','They ___ big.','Ellos son grandes.',['is','are'],1,'They significa ellos. Con they usamos are.',{en:'They is plural. Use are.',es:'They es plural. Usamos are.'}),
+ e('easy-b4','be','The T. rex ___ big.','El T. rex es grande.',['is','am'],0,'Un T. rex = it. Piensa en it is.',{en:'One T. rex is it. Use is.',es:'Un T. rex equivale a it. Usamos is.'}),
+ e('easy-b5','be','Its teeth ___ sharp.','Sus dientes son afilados.',['is','are'],1,'Teeth significa dientes: son varios.',{en:'Teeth is plural. Use are.',es:'Teeth es plural. Usamos are.'}),
+ e('easy-a1','affirmative','The T. rex ___ meat.','El T. rex come carne.',['eat','eats'],1,'Un animal = it. En afirmativo añadimos -s: eats.',{en:'With it, use eats.',es:'Con it, en afirmativo, usamos eats.'}),
+ e('easy-a2','affirmative','It ___ two legs.','Tiene dos patas.',['has','have'],0,'Con it, have cambia a has.',{en:'Use has with it.',es:'Con it usamos has.'}),
+ e('easy-a3','affirmative','The Triceratops ___ plants.','El Triceratops come plantas.',['eats','eat'],0,'Triceratops es un solo animal: it eats.',{en:'One dinosaur takes eats.',es:'Con un dinosaurio usamos eats.'}),
+ e('easy-a4','affirmative','Dinosaurs ___ eggs.','Los dinosaurios ponen huevos.',['lay','lays'],0,'Dinosaurs es plural. Con plural no añadimos -s.',{en:'Plural subjects use the base verb lay.',es:'Con sujeto plural usamos lay, sin -s.'}),
+ e('easy-a5','affirmative','It ___ on two legs.','Camina en dos patas.',['walk','walks'],1,'Con it añade -s: walks.',{en:'Use walks with it.',es:'Con it usamos walks.'}),
+ e('easy-n1','negative',"It doesn't ___ meat.",'No come carne.',['eat','eats'],0,"Después de doesn't el verbo queda sin -s: eat.",{en:"After doesn't, use eat.",es:"Después de doesn't usamos eat, sin -s."}),
+ e('easy-n2','negative',"It ___ have wings.",'No tiene alas.',["doesn't","isn't"],0,"Para negar have usamos doesn't have.",{en:"Doesn't + have makes the negative.",es:"Doesn't + have forma la negación."}),
+ e('easy-n3','negative',"They ___ live today.",'Ellos no viven hoy.',["don't","doesn't"],0,"Con they usamos don't.",{en:"Use don't with they.",es:"Con they usamos don't."}),
+ e('easy-n4','negative',"It doesn't ___ plants.",'No come plantas.', ['eats','eat'],1,"Doesn't ya lleva la marca de tercera persona. Elige eat.",{en:"Use the base verb after doesn't.",es:"Después de doesn't el verbo queda en forma base."}),
+ e('easy-n5','negative',"I ___ hunt dinosaurs.",'Yo no cazo dinosaurios.', ["doesn't","don't"],1,"Con I usamos don't.",{en:"Use don't with I.",es:"Con I usamos don't."}),
+ e('easy-q1','questions','___ it eat meat?','¿Come carne?',['Does','Do'],0,'Con it la pregunta empieza con Does.',{en:'Use Does with it.',es:'Con it usamos Does.'}),
+ e('easy-q2','questions','___ they lay eggs?','¿Ellos ponen huevos?',['Do','Does'],0,'Con they la pregunta empieza con Do.',{en:'Use Do with they.',es:'Con they usamos Do.'}),
+ e('easy-q3','questions','Does it ___ horns?','¿Tiene cuernos?',['has','have'],1,'Después de Does usamos have, no has.',{en:'After Does, use have.',es:'Después de Does usamos have.'}),
+ e('easy-q4','questions','Does the T. rex eat meat?','¿El T. rex come carne?',['Yes, it does.','No, it does not.'],0,'Meat significa carne. T. rex era carnívoro.',{en:'T. rex eats meat. Yes, it does.',es:'T. rex come carne. Yes, it does.'}),
+ e('easy-q5','questions','Is the Triceratops a herbivore?','¿El Triceratops es herbívoro?',['Yes, it is.','No, it is not.'],0,'Herbivore significa que come plantas.',{en:'Triceratops eats plants. Yes, it is.',es:'Triceratops come plantas. Yes, it is.'}),
+ e('easy-s1','science','Which dinosaur has three horns?','¿Qué dinosaurio tiene tres cuernos?',['Triceratops','T. rex'],0,'Horns significa cuernos. Busca la cabeza con tres cuernos.',{en:'Triceratops has three facial horns.',es:'Triceratops tiene tres cuernos en la cara.'}),
+ e('easy-s2','science','Which dinosaur has back plates?','¿Qué dinosaurio tiene placas en la espalda?',['Stegosaurus','T. rex'],0,'Plates significa placas. Observa el lomo.',{en:'Stegosaurus has back plates.',es:'Stegosaurus tiene placas en el lomo.'}),
+ e('easy-s3','science','What does the T. rex eat?','¿Qué come el T. rex?',['Plants','Meat'],1,'Plants = plantas. Meat = carne.',{en:'T. rex eats meat.',es:'T. rex come carne.'}),
+ e('easy-s4','science','What does the Stegosaurus eat?','¿Qué come el Stegosaurus?',['Plants','Meat'],0,'Stegosaurus es herbívoro. Herbívoro = come plantas.',{en:'Stegosaurus eats plants.',es:'Stegosaurus come plantas.'}),
+ e('easy-s5','science','Did T. rex and Stegosaurus live at the same time?','¿T. rex y Stegosaurus vivieron al mismo tiempo?',['Yes','No'],1,'Vivieron en períodos diferentes. Por eso cambiamos de época en el mapa.',{en:'No. Stegosaurus lived much earlier.',es:'No. Stegosaurus vivió mucho antes.'})
+];
+finalQuestions.splice(0,finalQuestions.length,...easyBank);
+zones[0].questions=[easyBank[0],easyBank[1],easyBank[2]];
+zones[1].questions=[easyBank[5],easyBank[6],easyBank[9]];
+zones[2].title=['The River Valley','El valle del río'];zones[2].species=['stegosaurus','allosaurus'];zones[2].questions=[easyBank[10],easyBank[11],easyBank[13]];
+zones[3].species=['triceratops','trex','stegosaurus','allosaurus'];zones[3].questions=[easyBank[15],easyBank[16],easyBank[17]];
+zones[4].questions=finalQuestions;
+for(const key of ['triceratops','trex','stegosaurus','allosaurus']){
+ const herb=['triceratops','stegosaurus'].includes(key),name=species[key].name;
+ encounterQuestions[key]=[
+  e(key+'-is','be',`It ___ ${key==='allosaurus'?'an':'a'} ${key==='trex'?'T. rex':name}.`,`Es un ${name}.`,['is','are'],0,'Un dinosaurio = it. Con it usamos is.',{en:'Use is for one dinosaur.',es:'Con un dinosaurio usamos is.'}),
+  e(key+'-food','science',`What does the ${key==='trex'?'T. rex':name} eat?`,`¿Qué come el ${name}?`,['Plants / plantas','Meat / carne'],herb?0:1,herb?'Es herbívoro: come plantas.':'Es carnívoro: come carne.',{en:herb?'It eats plants.':'It eats meat.',es:herb?'Come plantas.':'Come carne.'}),
+  e(key+'-eats','affirmative',`It ___ ${herb?'plants':'meat'}.`,`Come ${herb?'plantas':'carne'}.`,['eat','eats'],1,'En afirmativo, con it agregamos -s: eats.',{en:'It + eats: add -s.',es:'It + eats: añadimos -s.'}),
+  e(key+'-no','negative',`It doesn't ___ ${herb?'meat':'plants'}.`,`No come ${herb?'carne':'plantas'} como alimento principal.`,['eat','eats'],0,"Después de doesn't usamos eat, sin -s.",{en:"Doesn't + eat: use the base verb.",es:"Doesn't + eat: usa la forma base, sin -s."})
+ ];
+}
+
+species.stegosaurus.model="./stegosaurus.glb";

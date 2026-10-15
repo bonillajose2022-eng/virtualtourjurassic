@@ -1,44 +1,75 @@
-# Atribuciones y fuentes
+# Atribuciones y licencias — actualización de mundo abierto
 
 ## Código
 
-Código original del proyecto: licencia MIT, véase `LICENSE`.
+El código propio conserva MIT, véase `LICENSE`.
 
-Three.js r170, GLTFLoader y BufferGeometryUtils: © three.js authors, MIT. El texto original está en `vendor/THREE-LICENSE.txt`.
-- https://github.com/mrdoob/three.js/tree/r170
-- https://threejs.org/docs/
+Three.js r170, GLTFLoader, BufferGeometryUtils y SkeletonUtils: © three.js authors, MIT. Texto completo: `THREE-LICENSE.txt`.
 
-Se cambió únicamente la ruta local de importación de BufferGeometryUtils en GLTFLoader para conservar una carpeta vendor sencilla.
+Fuente: https://github.com/mrdoob/three.js/tree/r170
 
-## T. rex incluido
+Se adaptó la ruta de importación de BufferGeometryUtils en GLTFLoader para usar todos los archivos en la misma carpeta. SkeletonUtils clona por separado los esqueletos de cada individuo.
 
-**Animated T-Rex Dinosaur Biting Attack Loop** — **LasquetiSpice**.
+## Modelos incluidos — CC BY 4.0
 
-- Obra original: https://sketchfab.com/3d-models/animated-t-rex-dinosaur-biting-attack-loop-5bbcadb7d9274843abb5ada35767dba1
-- Licencia: **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
-- Términos: https://creativecommons.org/licenses/by/4.0/
-- Copia GLB distribuida por SceneView: https://sceneview.github.io/models/platforms/AnimatedTrex.glb
-- Registro público de atribución: https://sceneview.github.io/credits.html
-- Catálogo: https://github.com/sceneview/sceneview/blob/main/assets/catalog.json
+Todos conservan **Creative Commons Attribution 4.0 International**:
+https://creativecommons.org/licenses/by/4.0/
 
-Cambios realizados: sustitución de la extensión de material antigua `KHR_materials_pbrSpecularGlossiness` por un material glTF metallic-roughness, conservando textura diffuse/base color, normal y oclusión, con metallic=0 y roughness=0.85. La textura de brillo original sigue embebida pero no se usa. Esto adapta el archivo a Three.js r170 y puede cambiar su apariencia especular. No se modificaron malla, rig ni animación. La aplicación ajusta escala, posición y orientación al cargarlo. El autor no patrocina este proyecto.
+No se aplica la licencia MIT del código a estos modelos. Conserva título, autor, fuentes, enlace de licencia e indicación de modificaciones al redistribuir.
 
-El modelo conserva CC BY 4.0: la licencia MIT del código no lo reemplaza. Al redistribuir, conserva esta atribución, enlace de licencia e indicación de cambios.
+### Tyrannosaurus rex
 
-## Paisaje y audio
+- Obra: **Animated T-Rex Dinosaur Biting Attack Loop**.
+- Autor: **LasquetiSpice**.
+- Original: https://sketchfab.com/3d-models/animated-t-rex-dinosaur-biting-attack-loop-5bbcadb7d9274843abb5ada35767dba1
+- Copia distribuida por SceneView: https://sceneview.github.io/models/platforms/AnimatedTrex.glb
+- Registro: https://sceneview.github.io/credits.html
+- Archivo: `trex.glb`.
+- Modificación previa conservada: adaptación del material specular-glossiness a metallic-roughness para Three.js r170. Se conservan malla, rig, animación y texturas; cambia el aspecto especular. Escala y colocación ajustadas en ejecución.
 
-Paisaje creado mediante geometría procedural en `world.js`. Es ilustrativo y no procede de un escaneo paleobotánico. El viento y los tonos ambientales se generan con Web Audio; no son grabaciones auténticas de dinosaurios. La voz usa Speech Synthesis del navegador. Sin música ni archivos sonoros externos.
+### Triceratops
 
-## Fuentes científicas
+- Obra: **TRICERA**.
+- Publicada por **seth the yutyrannus** (slang107123456789).
+- La ficha del autor atribuye el modelo original a **rroobboo 999**.
+- Original: https://sketchfab.com/3d-models/tricera-6b0695ecb40a40dabd4f118ee4b729cd
+- Metadatos de licencia: https://api.sketchfab.com/v3/models/6b0695ecb40a40dabd4f118ee4b729cd
+- Archivo: `triceratops.glb`.
 
-Natural History Museum, Londres:
-- Triceratops: https://www.nhm.ac.uk/discover/dino-directory/triceratops.html
-- Stegosaurus: https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html
-- Tyrannosaurus: https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html
-- Brachiosaurus: https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html
+### Stegosaurus
 
-Se usaron como referencia de hechos generales; no se copiaron fotografías, ilustraciones ni textos extensos del museo. Los rangos de fechas son aproximados y pueden revisarse con nuevas investigaciones. El material educativo distingue rasgos respaldados por fósiles de colores, sonidos, movimientos y ambientación artísticos.
+- Obra: **STEGO**.
+- Publicada por **seth the yutyrannus** (slang107123456789).
+- La ficha del autor atribuye el modelo original a **rroobboo 999**.
+- Original: https://sketchfab.com/3d-models/stego-b07eb05fa95c413bb928eb2ffbdc9523
+- Metadatos de licencia: https://api.sketchfab.com/v3/models/b07eb05fa95c413bb928eb2ffbdc9523
+- Archivo: `stegosaurus.glb`.
 
-## Modelos opcionales no incluidos
+### Allosaurus
 
-Las opciones externas, autores, licencias publicadas y pasos de integración se detallan en README.md. No forman parte del ZIP ni de los recursos solicitados durante la ejecución inicial.
+- Obra: **Allosaurus**, publicada por **seth the yutyrannus**.
+- Modelo original atribuido por el publicador a **dead tubby's**. La versión del publicador elimina plumas y modifica la animación de reposo, según su descripción. No se presenta esa decisión artística como evidencia científica.
+- Versión usada: https://sketchfab.com/3d-models/allosaurus-02e651e39fed47bbaec0aa0546f17fd3
+- Original enlazado por el autor: https://sketchfab.com/3d-models/allosaurus-from-unity-a5a9a9c588734f398ecbeb3efc0b5c2e
+- Metadatos de licencia de ambas fichas: https://api.sketchfab.com/v3/models/02e651e39fed47bbaec0aa0546f17fd3 y https://api.sketchfab.com/v3/models/a5a9a9c588734f398ecbeb3efc0b5c2e
+- Archivo: `allosaurus.glb`.
+
+Los tres nuevos GLB se obtuvieron de las copias públicas de un repositorio educativo; sus metadatos embebidos y las fichas/API de Sketchfab identifican autor y CC BY 4.0:
+https://github.com/nrush23/game_programming/tree/main/week1/assets
+
+Archivos de origen: `tricera.glb`, `stego.glb`, `allosaurus.glb`.
+
+Los tres se incluyen sin modificar sus bytes. La aplicación ajusta escala, orientación y posición, clona individuos y selecciona clips de reposo cuando existen. Los autores no patrocinan este proyecto.
+
+## Paisaje, sonidos y ciencia
+
+El terreno y la vegetación son procedurales. El audio ambiental se sintetiza con Web Audio y la voz usa Speech Synthesis. No hay grabaciones auténticas de sonidos de dinosaurios ni se presentan como tales.
+
+Fuentes del Natural History Museum:
+- https://www.nhm.ac.uk/discover/dino-directory/triceratops.html
+- https://www.nhm.ac.uk/discover/dino-directory/stegosaurus.html
+- https://www.nhm.ac.uk/discover/dino-directory/tyrannosaurus.html
+- https://www.nhm.ac.uk/discover/dino-directory/allosaurus.html
+- https://www.nhm.ac.uk/discover/dino-directory/brachiosaurus.html
+
+Brachiosaurus es únicamente una ficha complementaria. Los cuatro modelos renderizados corresponden a las otras especies.

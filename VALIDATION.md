@@ -1,51 +1,37 @@
-# Validación de la primera versión
+# Validación — mundo abierto / actualización 3
 
-## Ejecutado en este entorno
+## Comprobado automáticamente
 
-- `node --check` en los módulos propios y dependencias JavaScript locales: sin errores de sintaxis.
-- `npm test`: **9 pruebas aprobadas**, 0 fallidas.
-- Banco final: 25 preguntas únicas; cinco en cada categoría; todas las claves corresponden a opciones existentes. La prueba recorre opciones correctas e incorrectas.
-- Corrección escrita: admite mayúsculas, espacios, apóstrofos tipográficos y punto final opcional; rechaza “doesn't eats”.
-- Simulación DOM con JSDOM, sin motor gráfico: inicio, selector español, descubrimiento, retroalimentación de error, las cuatro misiones iniciales, desbloqueo de zonas, evaluación de 24/25, repetición de 25/25, nombre guardado, ajustes, diario e insignia. Se comprobó que repetir respuestas correctas no duplica XP.
-- Persistencia: serialización/deserialización de progreso y resultados, recuperación de versión obsoleta y campos de colección inválidos; almacenamiento local comprobado dentro de la simulación DOM. No es una recarga real de un navegador.
-- Rutas: todos los recursos locales declarados existen. No hay rutas absolutas desde `/` para recursos de la página. La simulación usa una URL con prefijo de repositorio, como GitHub Pages.
-- Modelo GLB: cabecera y tamaño correctos, animación existente, imágenes embebidas y material compatible con la versión incluida del cargador. Se inspeccionó visualmente la textura base extraída; no se ejecutó renderizado 3D.
-- PDF: comprobadas sus referencias de bytes; un PDF de muestra con imagen JPEG se abrió con `pdfinfo`, que lo identificó como PDF 1.4, una página, A4 horizontal, sin cifrado. No equivale a comprobar la descarga ni la composición del certificado en un navegador.
-- Empaquetado: ZIP sin `node_modules`, sin enlaces simbólicos y con dependencias locales, modelo, licencias, código completo y documentación.
+**10 pruebas aprobadas, 0 fallidas.**
 
-## Implementado, pendiente de probar en dispositivos reales
+1. Salto: elevación, altura máxima aproximada de 1.6 m, rechazo de doble salto en el aire y aterrizaje sin hundimiento.
+2. Movimiento: caminar a 6 m/s, correr a 11 m/s, diagonal normalizada y límite radial del mapa a 235 m.
+3. Colisiones básicas contra círculos de obstáculos y altura de terreno finita en el mapa.
+4. Proximidad: encuentro cercano, ausencia de reapertura continua y rearme después de alejarse.
+5. Cuatro especies renderizadas, rutas locales existentes, separación Jurásico/Cretácico y créditos por modelo.
+6. Banco A1: 25 preguntas, cinco por categoría, dos opciones, claves correctas, traducción y pista española en todas. Cuatro preguntas adicionales por especie.
+7. Hidratación del progreso: nombre, XP, descubrimientos y ajustes previos se conservan.
+8. Resolución de dependencias locales planas en HTML y módulos.
+9. Parseo de los **cuatro GLB con GLTFLoader real en Node**, imágenes embebidas, geometría y animaciones existentes, dimensiones finitas y esqueletos clonados independientemente. La decodificación de imágenes se simuló para esta prueba; no se subieron texturas a una GPU.
+10. Flujo DOM con JSDOM: navegación sin bloqueos, encuentro en modo de campo, pista española antes de responder con interfaz inglesa, respuesta incorrecta/correcta, XP único, cambio de época, cambio a español, evaluación final 25/25 y repetición sin duplicación de XP.
 
-No hubo un navegador de pruebas habilitado para este entorno. No se ejecutaron Chrome, Safari, Firefox, un móvil, una tableta ni un visor. Por tanto, lo siguiente **no se declara validado**:
+También se ejecutó `node --check` en todos los módulos propios y de Three.js incluidos, y se verificó la integridad del ZIP.
 
-- Apariencia final, encuadre del T. rex, orientación y tamaño del modelo en pantalla.
-- Renderizado WebGL, GPU, consumo de memoria, FPS, sombras, iluminación y animación.
-- Gestos táctiles y captura de mouse reales.
-- Layout responsive en 360/390 px, orientación horizontal, zoom de texto y ausencia de superposiciones.
-- Voces disponibles, audio en iOS/Android y políticas de reproducción del navegador.
-- Texto exacto y descarga del certificado PDF generado desde canvas.
-- Publicación real en GitHub Pages o acceso por una URL propia.
-- Prueba manual de lector de pantalla. Hay controles HTML, foco visible, etiquetas, diálogos y modo alternativo; no se certifica conformidad WCAG.
+## Límites de las pruebas
 
-## Revisión manual recomendada antes de usarlo en clase
+No hay navegador gráfico habilitado para QA en este entorno. No se ejecutó renderizado WebGL ni se probó una pantalla táctil física. No se afirma haber comprobado FPS, encuadres, apariencia del modelo animado en pantalla, descarga del certificado, voces o composición responsive en un teléfono real.
 
-1. Publicar el contenido de la carpeta en un repositorio de prueba y abrir la URL de Pages.
-2. Confirmar carga del T. rex en portada; comenzar y comprobar que zona 1 muestra ficha sin modelo y el período adecuado.
-3. Usar WASD/flechas y arrastrar el espacio libre del paisaje. Observar el anillo; abrir con E cerca de él o con Observar desde lejos.
-4. Completar zona 1 y verificar que el T. rex aparece en zona 2; responder correctamente y confirmar desbloqueo de animación.
-5. Cambiar entre Stegosaurus/Triceratops y leer las etiquetas temporales. No deben coexistir como contemporáneos.
-6. Cambiar a español; las instrucciones cambian, las preguntas principales siguen en inglés.
-7. Responder incorrectamente y leer la explicación; completar zona 3 mediante corrección escrita.
-8. Cerrar/reabrir la pestaña a mitad de una misión y de la evaluación; comprobar continuidad y XP.
-9. Completar las 25 preguntas, revisar errores, escribir “José Muñoz” y descargar el PDF. Abrirlo y comprobar nombre, fecha y resultado.
-10. Repetir en teléfono y tableta, vertical/horizontal, calidad baja/alta y movimiento desactivado. Comprobar desplazamiento, botones y audio.
-11. Activar modo de campo; completar todo mediante Tab/Enter y teclado. Probar con almacenamiento bloqueado y con fallo de WebGL.
-12. Revisar la consola y Network: no debe haber 404 de archivos propios. Comprobar la misma URL desde otro dispositivo.
+El salto y el evento de proximidad se comprobaron mediante las mismas funciones puras que utiliza el motor, pero los gestos y su sensación en juego deben revisarse después de publicar.
 
-## Limitaciones deliberadas
+La entrega es una actualización descargable: el repositorio de GitHub y su página publicada no se han modificado desde aquí.
 
-- Solo T. rex tiene modelo 3D incluido. Las otras especies tienen respaldo de fichas, explícito en pantalla.
-- Entorno procedural, sin fotorrealismo completo, ecosistemas escaneados ni cinco mapas únicos.
-- El ciclo modifica lentamente la luz solar; no simula astronomía, cielo volumétrico ni clima.
-- La animación incluida es una mordida artística; no hay locomoción esquelética de caminata.
-- Sin WebXR ni soporte validado para visores.
-- Sin backend, identificación de alumnos, panel docente o sincronización. El resultado local puede modificarse en el navegador y no sirve como examen supervisado.
+## Prueba manual después de subir
+
+- Abrir la página con Ctrl + F5 y verificar que no hay 404 de recursos propios.
+- Caminar con WASD, mirar arrastrando, saltar con Espacio y correr con Shift.
+- Observar varios individuos de Triceratops y T. rex; cambiar al Jurásico y encontrar Stegosaurus y Allosaurus.
+- Acercarse a cada especie: la pregunta debe aparecer con traducción y pista en español. Cerrar el panel no debe reabrirlo inmediatamente.
+- Alejarse y volver; repetir una pregunta correcta no debe aumentar otra vez los XP.
+- Probar los botones táctiles en móvil vertical y horizontal. Si hay poco rendimiento, usar calidad Low.
+- Cambiar a modo de campo y comprobar que siguen disponibles preguntas, diario y evaluación.
+- Revisar el PDF con un nombre con tildes y comprobar que el progreso persiste tras recargar.
