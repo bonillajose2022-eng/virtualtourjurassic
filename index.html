@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071c1b"><meta name="description" content="Explore prehistoric expeditions and practise English. A bilingual 3D learning adventure."><title>Jurassic English VR — A Journey to the Dinosaur Age</title><link rel="stylesheet" href="./style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body>
+<div id="world" aria-label="Prehistoric 3D environment"></div><div class="vignette" aria-hidden="true"></div>
+<div id="loading" role="status" hidden><span id="loadText">Loading expedition</span><progress id="loadProgress" max="100" value="0"></progress><button id="skipLoad">Field mode / Modo de campo</button></div>
+<header><a class="brand" href="#" id="home" aria-label="Jurassic English home"><span class="brand-symbol">J<span>↗</span></span><span>JURASSIC<span class="brand-small">ENGLISH VR / EXPEDITION 001</span></span></a><div class="header-actions"><button id="lang" aria-label="Change language">EN <span>/ ES</span></button><button id="settings" aria-label="Settings / Ajustes">⚙</button></div></header>
+<main>
+<section id="landing" class="landing"><div class="eyebrow"><span class="live-dot"></span> A JOURNEY TO THE DINOSAUR AGE</div><h1>THE PAST<br>IS <em>ALIVE.</em></h1><p class="official-title">JURASSIC ENGLISH VR</p><p class="subtitle">Travel millions of years into the past.<br>Explore. Discover. Learn English.</p><div class="landing-actions"><button id="start" class="primary" data-i18n="start">START ADVENTURE</button><button id="how" data-i18n="how">HOW TO PLAY</button></div><button id="objectives" class="text-button" data-i18n="objectives">LEARNING OBJECTIVES</button><p class="landing-note" id="landingNote">3D exploration · Bilingual missions · No account needed</p><div class="hero-stamp"><span>SPECIMEN 001</span><b>TYRANNOSAURUS REX</b><small>LATE CRETACEOUS / 68–66 Ma</small></div></section>
+<section id="game" hidden>
+<div class="zone-heading"><div class="eyebrow" id="zoneTag"></div><h1 id="zoneTitle"></h1><p id="period"></p></div>
+<aside class="status"><b id="xp">0 XP</b><progress id="overall" max="5" value="0" aria-label="Completed expeditions"></progress><small id="saveStatus"></small><div id="badges" aria-live="polite"></div></aside>
+<nav id="zones" aria-label="Expeditions"></nav>
+<div class="field-preview" id="fieldPreview"><span class="eyebrow" id="viewStatus"></span><h2 id="specimenName"></h2><p id="fieldFact"></p><div id="speciesTabs"></div><button id="observe" class="primary" data-i18n="interact">OBSERVE / E</button><button id="mission" data-i18n="mission">OPEN MISSION</button></div>
+<div id="compass" aria-label="Compass">N <span id="bearing">000°</span><small id="distance"></small></div>
+<button id="journal" class="journal-button" data-i18n="journal">FIELD JOURNAL</button><div id="subtitle" role="status" hidden></div>
+<div class="touch-controls" id="touchControls" aria-label="Movement controls"><button data-move="forward" aria-label="Move forward">↑</button><div><button data-move="left" aria-label="Move left">←</button><button data-move="back" aria-label="Move back">↓</button><button data-move="right" aria-label="Move right">→</button></div></div>
+<button id="secret" class="secret-button" hidden>Investigate / Investigar ◇</button><p id="controlsHint" class="controls-hint">WASD / arrows · drag to look · E to observe · Esc to release mouse</p>
+</section></main>
+<footer><span id="artNote"></span><a href="./README.md" target="_blank" rel="noopener">Guide & credits ↗</a></footer>
+<dialog id="panel" aria-labelledby="panelTitle"><div class="panel-head"><span class="eyebrow">JURASSIC / FIELD TERMINAL</span><button id="closePanel" aria-label="Close / Cerrar">✕</button></div><h2 id="panelTitle"></h2><div id="panelBody"></div></dialog>
+<div id="toast" role="status" hidden></div><noscript><p class="noscript">Enable JavaScript to explore. Activa JavaScript para explorar.</p></noscript><script type="module" src="./script.js"></script>
+</body></html>
