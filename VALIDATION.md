@@ -1,37 +1,47 @@
-# Validación — mundo abierto / actualización 3
+# Validación de la entrega 4.0
 
-## Comprobado automáticamente
+## Ejecutado
 
-**10 pruebas aprobadas, 0 fallidas.**
+**10 pruebas automatizadas aprobadas, 0 fallidas**, con Node y JSDOM. Las pruebas de Three.js crean escenas y geometría reales, pero no un contexto WebGL ni una GPU. La decodificación de imágenes GLB se simula para el parseo en Node; no se afirma que esa prueba verifique texturas en pantalla.
 
-1. Salto: elevación, altura máxima aproximada de 1.6 m, rechazo de doble salto en el aire y aterrizaje sin hundimiento.
-2. Movimiento: caminar a 6 m/s, correr a 11 m/s, diagonal normalizada y límite radial del mapa a 235 m.
-3. Colisiones básicas contra círculos de obstáculos y altura de terreno finita en el mapa.
-4. Proximidad: encuentro cercano, ausencia de reapertura continua y rearme después de alejarse.
-5. Cuatro especies renderizadas, rutas locales existentes, separación Jurásico/Cretácico y créditos por modelo.
-6. Banco A1: 25 preguntas, cinco por categoría, dos opciones, claves correctas, traducción y pista española en todas. Cuatro preguntas adicionales por especie.
-7. Hidratación del progreso: nombre, XP, descubrimientos y ajustes previos se conservan.
-8. Resolución de dependencias locales planas en HTML y módulos.
-9. Parseo de los **cuatro GLB con GLTFLoader real en Node**, imágenes embebidas, geometría y animaciones existentes, dimensiones finitas y esqueletos clonados independientemente. La decodificación de imágenes se simuló para esta prueba; no se subieron texturas a una GPU.
-10. Flujo DOM con JSDOM: navegación sin bloqueos, encuentro en modo de campo, pista española antes de responder con interfaz inglesa, respuesta incorrecta/correcta, XP único, cambio de época, cambio a español, evaluación final 25/25 y repetición sin duplicación de XP.
+1. Movimiento: caminar, correr, diagonal normalizada, avance analógico y límites del terreno mediante las funciones usadas por el motor.
+2. Salto: gravedad, altura, rechazo de doble salto, aterrizaje a nivel del suelo y colisiones circulares con obstáculos.
+3. Encuentros: puerta de proximidad, cierre sin reapertura continua y rearme tras alejarse. El motor solo solicita encuentros automáticos estando en suelo; la integración con salto y entrada táctil queda pendiente en navegador.
+4. Datos: 16 recursos animales distintos (15 taxones a nivel de género y un mosasaurio sin género asignado), al menos cinco preguntas con ayudas y explicaciones por entrada, 25 preguntas finales en cinco grupos, pertenencia a diez reservas.
+5. Migración: conserva XP, nombre, ajustes y respuestas compatibles de versión 1. Reintentar una respuesta incorrecta no penaliza; repetir una correcta o recompensa no aumenta XP otra vez.
+6. Modelos: parseo real de los 16 GLB con GLTFLoader, mallas presentes, dimensiones finitas, recursos embebidos, bytes coincidentes con el catálogo, hashes diferentes y esqueletos de clones independientes cuando hay rig.
+7. Reservas: carga de las diez mediante el método real `setPeriod`, selección correcta de animales, escala normalizada, aparición fuera del campamento, reducción de duplicados en Low, simulación de estados, actualización de huellas y liberación de recursos al cambiar.
+8. DOM: inicio explícito de modo de campo, cierre y continuación, error / acierto, pista española, EN/ES, misiones, fósil, cambio de reserva, recorrido lógico de las cinco estaciones, evaluación 25/25, recuperación de estado y repetición sin duplicar XP. JSDOM no pinta la interfaz ni verifica diseño responsive.
+9. Rutas: enlaces y módulos locales resueltos bajo un prefijo de repositorio de GitHub Pages; `.nojekyll` presente. Los GLB se comprueban además en la prueba de modelos.
+10. Certificado: se ejecutó el generador real con Canvas de Node, nombre con tildes, resultado 23/25, PDF A4 horizontal, tabla xref válida y nombre de descarga. Se corrigió un fallo anterior que omitía dibujar el nombre. Se renderizó el PDF de prueba con Poppler y se inspeccionó visualmente: nombre, fecha y resultado legibles, sin recortes. El PDF de prueba no es un certificado del usuario y no se incluye en el juego.
 
-También se ejecutó `node --check` en todos los módulos propios y de Three.js incluidos, y se verificó la integridad del ZIP.
+También se comprueba sintaxis de todos los módulos propios y la integridad del ZIP. Las comprobaciones locales no constituyen una publicación en GitHub.
 
-## Límites de las pruebas
+## Pendiente de prueba real en navegador
 
-No hay navegador gráfico habilitado para QA en este entorno. No se ejecutó renderizado WebGL ni se probó una pantalla táctil física. No se afirma haber comprobado FPS, encuadres, apariencia del modelo animado en pantalla, descarga del certificado, voces o composición responsive en un teléfono real.
+No hubo un navegador compatible habilitado para QA de este proyecto en este entorno. **No se ha ejecutado renderizado WebGL, ni se ha validado apariencia o rendimiento en computador / teléfono.** Tampoco se ha subido este paquete al repositorio del usuario.
 
-El salto y el evento de proximidad se comprobaron mediante las mismas funciones puras que utiliza el motor, pero los gestos y su sensación en juego deben revisarse después de publicar.
+- Inicio y carga 3D con GPU: aspecto de cada modelo, orientación, materiales, iluminación y cámaras.
+- FPS, memoria al viajar repetidamente y comportamiento en equipos escolares.
+- Sensación de WASD, captura del mouse, Escape, carrera, salto y colisiones al explorar físicamente todo el terreno.
+- Joystick y arrastre simultáneo con botones de salto / foto en una pantalla táctil real.
+- Proximidad durante un salto; apertura única por especie, cierre y práctica posterior con E.
+- Fotografía, selección del animal según encuadre, actualización del álbum y descarga real de JPG.
+- Pistas y voces instaladas, volumen, subtítulos, reducción de movimiento y modo tranquilo.
+- Persistencia después de recargar el navegador; exportación/importación entre dominios o dispositivos.
+- Descarga real del PDF desde un navegador, especialmente Safari/iOS.
+- Diseño responsive en 390×844, 768×1024 y 1366×768. Existen reglas CSS para estas clases de pantalla; no equivalen a una comprobación visual ejecutada.
+- Error de WebGL/contexto perdido: mensaje con elección explícita de Reintentar 3D o modo de campo.
+- Publicación real en GitHub Pages y caché después de reemplazar una versión antigua.
 
-La entrega es una actualización descargable: el repositorio de GitHub y su página publicada no se han modificado desde aquí.
+## Lista manual recomendada después de publicar
 
-## Prueba manual después de subir
+1. Inicia aventura y observa los cuatro animales de Hell Creek; cambia a Morrison y luego a las ocho reservas restantes.
+2. Camina, corre, salta, acércate durante un salto, cierra la actividad y confirma que puedes seguir caminando. Vuelve con E.
+3. Cambia calidad y repite viajes. Comprueba que no hay colisiones con vegetación invisible y usa regresar al campamento.
+4. Haz fotos, sigue tres huellas en orden, busca el animal de una descripción, investiga la cueva y revisa misiones/diario.
+5. Termina cinco estaciones; recarga a mitad del proceso; completa y descarga un certificado con tu nombre.
+6. Repite preguntas, fotos y evaluación: verifica que las recompensas ya obtenidas no se repiten.
+7. Haz lo mismo en modo de campo, teniendo en cuenta que allí no hay exploración ni fotografía 3D.
 
-- Abrir la página con Ctrl + F5 y verificar que no hay 404 de recursos propios.
-- Caminar con WASD, mirar arrastrando, saltar con Espacio y correr con Shift.
-- Observar varios individuos de Triceratops y T. rex; cambiar al Jurásico y encontrar Stegosaurus y Allosaurus.
-- Acercarse a cada especie: la pregunta debe aparecer con traducción y pista en español. Cerrar el panel no debe reabrirlo inmediatamente.
-- Alejarse y volver; repetir una pregunta correcta no debe aumentar otra vez los XP.
-- Probar los botones táctiles en móvil vertical y horizontal. Si hay poco rendimiento, usar calidad Low.
-- Cambiar a modo de campo y comprobar que siguen disponibles preguntas, diario y evaluación.
-- Revisar el PDF con un nombre con tildes y comprobar que el progreso persiste tras recargar.
+Registra navegador, versión, dispositivo, errores y FPS de esa revisión antes de afirmar compatibilidad comprobada con tus equipos.

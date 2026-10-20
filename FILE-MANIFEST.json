@@ -1,0 +1,206 @@
+{
+  ".gitignore": {
+    "bytes": 24,
+    "sha256": "6c7d15d2ab1a0b51ebcae7e88b9ad01f0713d0833bc2dbe8f3bcc7a81b66b344"
+  },
+  ".nojekyll": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "BufferGeometryUtils.js": {
+    "bytes": 31768,
+    "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+  },
+  "CREDITS.md": {
+    "bytes": 16335,
+    "sha256": "8afc26552b346773bdbbf104692f1c269d07a1fc5642c6dbac0819312106467e"
+  },
+  "GLTFLoader.js": {
+    "bytes": 110266,
+    "sha256": "8a7db5a19d1018d79fb9a7a8b8372f317682027321a67d86023002e264ea479d"
+  },
+  "LICENSE": {
+    "bytes": 1189,
+    "sha256": "8ef5f744bafe81e9609def2b5cef06600aa9e3ae2ca72a74ae9238de9e15329f"
+  },
+  "README.md": {
+    "bytes": 12994,
+    "sha256": "195f44eb127d10cccebd2199acae701fd5b469ff9383bf5b1175134a6033c0c3"
+  },
+  "SkeletonUtils.js": {
+    "bytes": 8802,
+    "sha256": "ee412be1aa05f3051c2bda8ea89612c1ba70c5c87de62b56040282120d5eb991"
+  },
+  "THREE-LICENSE.txt": {
+    "bytes": 1081,
+    "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+  },
+  "VALIDATION.md": {
+    "bytes": 5356,
+    "sha256": "096e9162e73ec3e7930ece9f40221993dcd4c4dd864d0be744280fad847b7800"
+  },
+  "allosaurus.glb": {
+    "bytes": 1273344,
+    "sha256": "d50946b79387f6b2146eddb0c1b75350407df78a91ab30854c30e965319b5229"
+  },
+  "assessment-bank.js": {
+    "bytes": 9207,
+    "sha256": "598aa7052445573e0ede6e930d1c87fb2192bd3ebad3aabb4c1905bd62c21958"
+  },
+  "assets/models/albertosaurus.glb": {
+    "bytes": 297232,
+    "sha256": "842904741889befabe1f7a92aac05d5f851148553982473e89a429a6ce8c35bf"
+  },
+  "assets/models/ankylosaurus.glb": {
+    "bytes": 101940,
+    "sha256": "d87ae3c930d96d8c23390ad19bc061ef1ce7a73e758f889209d71b5fad8c4611"
+  },
+  "assets/models/beipiaosaurus.glb": {
+    "bytes": 1825116,
+    "sha256": "832c0f7208357d964ab77847e7f410e13720da2045ec1d6de99febc290a761b3"
+  },
+  "assets/models/brachiosaurus.glb": {
+    "bytes": 601376,
+    "sha256": "d0c1c51ec0c0cd28c25eb40694c0bd595f697493530e9c7f9a6d8d4d099ebf96"
+  },
+  "assets/models/dilophosaurus.glb": {
+    "bytes": 602560,
+    "sha256": "365fba921ffaae07f3593e5c4db56652fbdea04287ec861d4e03bd55328fcead"
+  },
+  "assets/models/gallimimus.glb": {
+    "bytes": 602292,
+    "sha256": "1612ede9bc5e2fb34b7c37500d7ee5e5425d6c180323a0d0f70a4915aeffb025"
+  },
+  "assets/models/mosasaurus.glb": {
+    "bytes": 594556,
+    "sha256": "e4b88d85917112ef4f1ad83e74718ad4420818a459e426fa607bfb5b8a32dee7"
+  },
+  "assets/models/pachycephalosaurus.glb": {
+    "bytes": 602884,
+    "sha256": "741916053bc9a9021509818bca42567701dbbf80dca33b009d0df952a5c2b6d2"
+  },
+  "assets/models/pentaceratops.glb": {
+    "bytes": 123224,
+    "sha256": "944e1d35ebd4546dc4a297b5c8335a69d56dedd35285198e4c9fe8d4a8bc12e9"
+  },
+  "assets/models/plesiosaurus.glb": {
+    "bytes": 556268,
+    "sha256": "7e11982a0e6d9030bc382a8a94f8ec1e1c73acc822b8404a275b7588a2b0afc4"
+  },
+  "assets/models/sinosauropteryx.glb": {
+    "bytes": 2940852,
+    "sha256": "690254a0082cf6981d958faaba11ac03c35e58cc17c6c23edb1c1cfa54aa28a0"
+  },
+  "assets/models/spinosaurus.glb": {
+    "bytes": 1973968,
+    "sha256": "7ad8c7a6708e027e3c2c3832f32d5f832d0db2741e43c851f27c5b20653ab90d"
+  },
+  "catalog.json": {
+    "bytes": 13673,
+    "sha256": "18a42c365ed039f69348bea68c58223c64a649785109a470954ce41d4f2d6979"
+  },
+  "certificate.js": {
+    "bytes": 2697,
+    "sha256": "7a778101eeeaf2ad9393f0503fab6d9fbde59db62dc0ece30d2bb0db6447fc0a"
+  },
+  "data.js": {
+    "bytes": 17197,
+    "sha256": "5ec3e8e8ce08e803174b45f4012d43ab823520ad9db12b67bea9788da9a039b1"
+  },
+  "docs/ANADIR_ESPECIES.md": {
+    "bytes": 4835,
+    "sha256": "8d79976541d0fdb05b23ff7ee4fa5c95a32f7f46663290dcb2dc794baeaee11c"
+  },
+  "docs/EDITAR_PREGUNTAS.md": {
+    "bytes": 2378,
+    "sha256": "90b3ca36938e54e03724ccb3b62becf6362ddbe195b28af44a360b320d358653"
+  },
+  "docs/SCIENCE.md": {
+    "bytes": 4895,
+    "sha256": "8204ee9633a147a8ea80ded6f136133b17331485306de8e1098c2e9615973d3d"
+  },
+  "docs/asset-provenance.json": {
+    "bytes": 9772,
+    "sha256": "2f186a13328566617983e5c3ce9816d9fc6d473ebb2c3dad186b48cbf8e74a29"
+  },
+  "docs/license-verification.json": {
+    "bytes": 3411,
+    "sha256": "c14f3c4205ad30b2d83e1d00afc0f61e26a3b1c3c8d572ad8958f8ece36109b4"
+  },
+  "docs/model-credits.json": {
+    "bytes": 16287,
+    "sha256": "9d49eb9a3e355387ee0a5eb03da5f0f681530670faa5194f520ca840af184914"
+  },
+  "docs/previous-credits.md": {
+    "bytes": 4188,
+    "sha256": "3679692b9db6d7a3e495fe24a88ee0133175acbc63e831fce5e3c15c798deca1"
+  },
+  "docs/previous-model-verification.json": {
+    "bytes": 2816,
+    "sha256": "cbee5380eab3ae3eaf1995009ac73bbdcc57ece3be7a8f789094a2e0162ed79f"
+  },
+  "index.html": {
+    "bytes": 4599,
+    "sha256": "acbbd9f46516e062d17a3a0b2edeafa7e3f87ce131388da517d7ab7657eedd6c"
+  },
+  "package-lock.json": {
+    "bytes": 27035,
+    "sha256": "bb6804b5c5d3017c80033fa8a03feb472273fa3033af92be96a0467cf55258ff"
+  },
+  "package.json": {
+    "bytes": 262,
+    "sha256": "24152a00ec157ec81d5e513b0ce22b29b5e35c3dc0ff2a8e442680c04f3e418a"
+  },
+  "physics.js": {
+    "bytes": 1928,
+    "sha256": "c461cb155853315714cd3df4e1ffa7b98a3ca2104793f8aafaf8c59e87ac2e9a"
+  },
+  "script.js": {
+    "bytes": 39654,
+    "sha256": "b418ed534d3113e18fc18dd7575d31377bdfb5b0956baca3cde7cbce9d552873"
+  },
+  "stegosaurus.glb": {
+    "bytes": 4356560,
+    "sha256": "93d26ab8619c3a15fe75d06962971fb834b60aab6982cd14329934bf13d30994"
+  },
+  "style.css": {
+    "bytes": 11131,
+    "sha256": "63d5d9edf3adb02a956509b2e497736f446cdfed02365bec2a6fc860979d35ee"
+  },
+  "test_certificate.mjs": {
+    "bytes": 1896,
+    "sha256": "3093a07493215fb43c763226c90330eff191c8a2084a02ddbce92ac98df9badf"
+  },
+  "test_flow.mjs": {
+    "bytes": 4461,
+    "sha256": "7301c86c5818604e9d5985aa161677a5826cb03ef5af5606a7a4332113975f2e"
+  },
+  "test_models.mjs": {
+    "bytes": 1587,
+    "sha256": "1273ae937a4b8826d6b60616d9a8107c1b46109b1c097706165fc7c0486f3448"
+  },
+  "test_routes.mjs": {
+    "bytes": 934,
+    "sha256": "4cf6d5c7931be0246d67671fd3414e894583fa1218f54a1c156872b1804042a2"
+  },
+  "test_world.mjs": {
+    "bytes": 5032,
+    "sha256": "e2c9567796dcc9eabc5897ec3bc5aff44254598b8a4bac3e5d500c7a24cfa527"
+  },
+  "three.module.js": {
+    "bytes": 1314681,
+    "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+  },
+  "trex.glb": {
+    "bytes": 6612728,
+    "sha256": "fbf857390ea59235d79c9389052fdfd8af0b3e78c6301ca185a277c636e86fe8"
+  },
+  "triceratops.glb": {
+    "bytes": 3735464,
+    "sha256": "e799e942bd1b303228e2e7263cf07915af7280b72b03817c249991086dc455e0"
+  },
+  "world.js": {
+    "bytes": 24932,
+    "sha256": "761cf341d2ba0538b4cfc581de3efa145aee51047de5b2c04ecc8a2d786d9614"
+  }
+}
