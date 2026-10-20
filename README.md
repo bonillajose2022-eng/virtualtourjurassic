@@ -1,13 +1,13 @@
 # JURASSIC ENGLISH VR: Open World Adventure
 
-Versión 4.0. Proyecto estático para GitHub Pages. Se revisó y amplió el paquete anterior `Jurassic_Mundo_Abierto_v2.zip`. Se mantienen la clave de guardado local, XP, descubrimientos compatibles y las 25 preguntas A1 con sus identificadores. **Esta entrega no modifica automáticamente el repositorio ni su página publicada.**
+Versión 4.0.2. Proyecto estático para GitHub Pages. Se revisó y amplió el paquete anterior `Jurassic_Mundo_Abierto_v2.zip`. Se mantienen la clave de guardado local, XP, descubrimientos compatibles y las 25 preguntas A1 con sus identificadores. **Esta entrega no modifica automáticamente el repositorio ni su página publicada.**
 
 La experiencia principal es caminar por una reserva de unos 470 m de diámetro, observar animales y encontrar actividades opcionales. Ninguna respuesta desbloquea o bloquea el desplazamiento. «VR» forma parte del nombre: no hay soporte WebXR con visor.
 
 ## Publicar en GitHub Pages
 
-1. Descomprime `Jurassic_English_Open_World_v4.zip`.
-2. Sube **todo su contenido a la raíz del repositorio**, manteniendo las carpetas `assets` y `docs`. `index.html` debe quedar directamente en la raíz, no dentro de una carpeta adicional. No subas el ZIP como si fuera la aplicación.
+1. Descomprime `Jurassic_Completo_Animales_v4_0_2.zip`.
+2. Sube **todo su contenido a la raíz del repositorio**, manteniendo `docs`; los dieciséis modelos GLB van junto a `index.html`. `index.html` debe quedar directamente en la raíz, no dentro de una carpeta adicional. No subas el ZIP como si fuera la aplicación.
 3. En GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**. Si tu rama se llama de otra forma, selecciona esa rama.
 4. Espera la publicación y abre la URL que muestre GitHub. Para tu repositorio actual sería `https://bonillajose2022-eng.github.io/virtualtourjurassic/`, siempre que mantengas ese nombre y configuración. No se ha comprobado ni actualizado esa publicación desde esta entrega.
 5. Recarga con Ctrl+F5 después de actualizar. Conserva los dieciséis GLB: si falta uno, el juego informa el fallo; no lo sustituye por un animal geométrico.
@@ -20,7 +20,7 @@ Para probar en tu computador, dentro de la carpeta extraída ejecuta `python -m 
 
 ## Empezar a jugar
 
-Pulsa **Iniciar / Continuar aventura**. Se cargan los modelos de tu reserva. Cierra la introducción y sigue el tutorial: caminar, saltar, abrir el mapa y encontrar un animal. Haz clic en el paisaje para capturar el cursor; si el navegador no permite capturarlo, arrastra para mirar.
+Pulsa **Iniciar / Continuar aventura**. Usa **Ver animal** para colocarte en un punto de observación seguro. El HUD muestra cuántos modelos se cargaron; los fallos aparecen en un panel con nombres de archivo y botón de reintento. Se cargan los modelos de tu reserva. Cierra la introducción y sigue el tutorial: caminar, saltar, abrir el mapa y encontrar un animal. Haz clic en el paisaje para capturar el cursor; si el navegador no permite capturarlo, arrastra para mirar.
 
 | Acción | Computador | Pantalla táctil |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Antes de cambiar de dominio o equipo usa **Menú → Exportar progreso**. Luego 
 | `data.js` | Especies, reservas, misiones, preguntas de encuentro y migración |
 | `assessment-bank.js` | 25 preguntas finales con identificadores estables |
 | `certificate.js` | Canvas y PDF local, sin librería PDF externa |
-| `*.glb`, `assets/models/*.glb` | Los dieciséis modelos, incluidos con sus bytes |
+| `*.glb` | Los dieciséis modelos, incluidos con sus bytes |
 | `three.module.js`, `GLTFLoader.js`, `SkeletonUtils.js`, `BufferGeometryUtils.js` | Dependencias locales del navegador |
 | `docs/` | Guías, ciencia, licencias y evidencia de recursos |
 | `test_*.mjs`, `package*.json` | Pruebas de desarrollo; no se necesitan para jugar |

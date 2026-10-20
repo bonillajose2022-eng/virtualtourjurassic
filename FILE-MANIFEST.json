@@ -12,20 +12,24 @@
     "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
   },
   "CREDITS.md": {
-    "bytes": 16335,
-    "sha256": "8afc26552b346773bdbbf104692f1c269d07a1fc5642c6dbac0819312106467e"
+    "bytes": 16167,
+    "sha256": "fab956e17936a1d236ba7f03269137dc1302e398cd42351a02a35ab23cb653a1"
   },
   "GLTFLoader.js": {
     "bytes": 110266,
     "sha256": "8a7db5a19d1018d79fb9a7a8b8372f317682027321a67d86023002e264ea479d"
+  },
+  "LEEME_PRIMERO.md": {
+    "bytes": 2130,
+    "sha256": "609d79227dd0e92af030c72caee54d987a0d2dbdd2e42ca8299d278368c560c8"
   },
   "LICENSE": {
     "bytes": 1189,
     "sha256": "8ef5f744bafe81e9609def2b5cef06600aa9e3ae2ca72a74ae9238de9e15329f"
   },
   "README.md": {
-    "bytes": 12994,
-    "sha256": "195f44eb127d10cccebd2199acae701fd5b469ff9383bf5b1175134a6033c0c3"
+    "bytes": 13198,
+    "sha256": "4513e153e06297f4daff28671cb8f497c629865380bad45c0cbbfd69ed71f0be"
   },
   "SkeletonUtils.js": {
     "bytes": 8802,
@@ -36,80 +40,56 @@
     "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
   },
   "VALIDATION.md": {
-    "bytes": 5356,
-    "sha256": "096e9162e73ec3e7930ece9f40221993dcd4c4dd864d0be744280fad847b7800"
+    "bytes": 6200,
+    "sha256": "7966f2c3d044db647c54e2dd517ea75fddd0439e0fc97c7bb475a671b2a9c5af"
+  },
+  "albertosaurus.glb": {
+    "bytes": 297232,
+    "sha256": "842904741889befabe1f7a92aac05d5f851148553982473e89a429a6ce8c35bf"
   },
   "allosaurus.glb": {
     "bytes": 1273344,
     "sha256": "d50946b79387f6b2146eddb0c1b75350407df78a91ab30854c30e965319b5229"
   },
+  "ankylosaurus.glb": {
+    "bytes": 101940,
+    "sha256": "d87ae3c930d96d8c23390ad19bc061ef1ce7a73e758f889209d71b5fad8c4611"
+  },
   "assessment-bank.js": {
     "bytes": 9207,
     "sha256": "598aa7052445573e0ede6e930d1c87fb2192bd3ebad3aabb4c1905bd62c21958"
   },
-  "assets/models/albertosaurus.glb": {
-    "bytes": 297232,
-    "sha256": "842904741889befabe1f7a92aac05d5f851148553982473e89a429a6ce8c35bf"
-  },
-  "assets/models/ankylosaurus.glb": {
-    "bytes": 101940,
-    "sha256": "d87ae3c930d96d8c23390ad19bc061ef1ce7a73e758f889209d71b5fad8c4611"
-  },
-  "assets/models/beipiaosaurus.glb": {
+  "beipiaosaurus.glb": {
     "bytes": 1825116,
     "sha256": "832c0f7208357d964ab77847e7f410e13720da2045ec1d6de99febc290a761b3"
   },
-  "assets/models/brachiosaurus.glb": {
+  "brachiosaurus.glb": {
     "bytes": 601376,
     "sha256": "d0c1c51ec0c0cd28c25eb40694c0bd595f697493530e9c7f9a6d8d4d099ebf96"
   },
-  "assets/models/dilophosaurus.glb": {
-    "bytes": 602560,
-    "sha256": "365fba921ffaae07f3593e5c4db56652fbdea04287ec861d4e03bd55328fcead"
-  },
-  "assets/models/gallimimus.glb": {
-    "bytes": 602292,
-    "sha256": "1612ede9bc5e2fb34b7c37500d7ee5e5425d6c180323a0d0f70a4915aeffb025"
-  },
-  "assets/models/mosasaurus.glb": {
-    "bytes": 594556,
-    "sha256": "e4b88d85917112ef4f1ad83e74718ad4420818a459e426fa607bfb5b8a32dee7"
-  },
-  "assets/models/pachycephalosaurus.glb": {
-    "bytes": 602884,
-    "sha256": "741916053bc9a9021509818bca42567701dbbf80dca33b009d0df952a5c2b6d2"
-  },
-  "assets/models/pentaceratops.glb": {
-    "bytes": 123224,
-    "sha256": "944e1d35ebd4546dc4a297b5c8335a69d56dedd35285198e4c9fe8d4a8bc12e9"
-  },
-  "assets/models/plesiosaurus.glb": {
-    "bytes": 556268,
-    "sha256": "7e11982a0e6d9030bc382a8a94f8ec1e1c73acc822b8404a275b7588a2b0afc4"
-  },
-  "assets/models/sinosauropteryx.glb": {
-    "bytes": 2940852,
-    "sha256": "690254a0082cf6981d958faaba11ac03c35e58cc17c6c23edb1c1cfa54aa28a0"
-  },
-  "assets/models/spinosaurus.glb": {
-    "bytes": 1973968,
-    "sha256": "7ad8c7a6708e027e3c2c3832f32d5f832d0db2741e43c851f27c5b20653ab90d"
-  },
   "catalog.json": {
-    "bytes": 13673,
-    "sha256": "18a42c365ed039f69348bea68c58223c64a649785109a470954ce41d4f2d6979"
+    "bytes": 13505,
+    "sha256": "f33b69e44344fbe79b64c878cb938216af1ed63cd2218dd94f738e0405bb88b4"
   },
   "certificate.js": {
     "bytes": 2697,
     "sha256": "7a778101eeeaf2ad9393f0503fab6d9fbde59db62dc0ece30d2bb0db6447fc0a"
   },
   "data.js": {
-    "bytes": 17197,
-    "sha256": "5ec3e8e8ce08e803174b45f4012d43ab823520ad9db12b67bea9788da9a039b1"
+    "bytes": 17026,
+    "sha256": "52e9d00b6c6aae334cdb46d5a1b93618fd8d63ed7b1fd98e206dfbcf8f6f9c34"
+  },
+  "dilophosaurus.glb": {
+    "bytes": 602560,
+    "sha256": "365fba921ffaae07f3593e5c4db56652fbdea04287ec861d4e03bd55328fcead"
   },
   "docs/ANADIR_ESPECIES.md": {
     "bytes": 4835,
-    "sha256": "8d79976541d0fdb05b23ff7ee4fa5c95a32f7f46663290dcb2dc794baeaee11c"
+    "sha256": "207d5e65f266a6de7173e76832743e377ad2787db96bf4fd9d6adc44ccce7695"
+  },
+  "docs/CORRECCION_MOUSE.md": {
+    "bytes": 1582,
+    "sha256": "12d27b950cff8380ec1a1a85a316d40125154005c3af2bf3aa9bd29e0373ba06"
   },
   "docs/EDITAR_PREGUNTAS.md": {
     "bytes": 2378,
@@ -128,8 +108,8 @@
     "sha256": "c14f3c4205ad30b2d83e1d00afc0f61e26a3b1c3c8d572ad8958f8ece36109b4"
   },
   "docs/model-credits.json": {
-    "bytes": 16287,
-    "sha256": "9d49eb9a3e355387ee0a5eb03da5f0f681530670faa5194f520ca840af184914"
+    "bytes": 16119,
+    "sha256": "da438dcd8a671d994f4bb803d18ff19e5bf2437ba252f0fdecce3a77c66a068c"
   },
   "docs/previous-credits.md": {
     "bytes": 4188,
@@ -139,33 +119,61 @@
     "bytes": 2816,
     "sha256": "cbee5380eab3ae3eaf1995009ac73bbdcc57ece3be7a8f789094a2e0162ed79f"
   },
+  "gallimimus.glb": {
+    "bytes": 602292,
+    "sha256": "1612ede9bc5e2fb34b7c37500d7ee5e5425d6c180323a0d0f70a4915aeffb025"
+  },
   "index.html": {
-    "bytes": 4599,
-    "sha256": "acbbd9f46516e062d17a3a0b2edeafa7e3f87ce131388da517d7ab7657eedd6c"
+    "bytes": 4728,
+    "sha256": "f0232fafbfa459123f4f3a1f7158ca256981b1bdac82cd55e05e940ff59f4078"
+  },
+  "mosasaurus.glb": {
+    "bytes": 594556,
+    "sha256": "e4b88d85917112ef4f1ad83e74718ad4420818a459e426fa607bfb5b8a32dee7"
+  },
+  "pachycephalosaurus.glb": {
+    "bytes": 602884,
+    "sha256": "741916053bc9a9021509818bca42567701dbbf80dca33b009d0df952a5c2b6d2"
   },
   "package-lock.json": {
     "bytes": 27035,
-    "sha256": "bb6804b5c5d3017c80033fa8a03feb472273fa3033af92be96a0467cf55258ff"
+    "sha256": "61eb644f09904164c5ea39fd851f52a0bc2b4a25a0fe16e717e385e7ebf38875"
   },
   "package.json": {
     "bytes": 262,
-    "sha256": "24152a00ec157ec81d5e513b0ce22b29b5e35c3dc0ff2a8e442680c04f3e418a"
+    "sha256": "fc96f92074778d379054c7f6d2ebb762759ca3a4056933bcbf935a58efb16492"
+  },
+  "pentaceratops.glb": {
+    "bytes": 123224,
+    "sha256": "944e1d35ebd4546dc4a297b5c8335a69d56dedd35285198e4c9fe8d4a8bc12e9"
   },
   "physics.js": {
     "bytes": 1928,
     "sha256": "c461cb155853315714cd3df4e1ffa7b98a3ca2104793f8aafaf8c59e87ac2e9a"
   },
+  "plesiosaurus.glb": {
+    "bytes": 556268,
+    "sha256": "7e11982a0e6d9030bc382a8a94f8ec1e1c73acc822b8404a275b7588a2b0afc4"
+  },
   "script.js": {
-    "bytes": 39654,
-    "sha256": "b418ed534d3113e18fc18dd7575d31377bdfb5b0956baca3cde7cbce9d552873"
+    "bytes": 41835,
+    "sha256": "f2199c29016e3294f5241c3094cf0bfb7facdb3b99ca42a6182197013fd98e29"
+  },
+  "sinosauropteryx.glb": {
+    "bytes": 2940852,
+    "sha256": "690254a0082cf6981d958faaba11ac03c35e58cc17c6c23edb1c1cfa54aa28a0"
+  },
+  "spinosaurus.glb": {
+    "bytes": 1973968,
+    "sha256": "7ad8c7a6708e027e3c2c3832f32d5f832d0db2741e43c851f27c5b20653ab90d"
   },
   "stegosaurus.glb": {
     "bytes": 4356560,
     "sha256": "93d26ab8619c3a15fe75d06962971fb834b60aab6982cd14329934bf13d30994"
   },
   "style.css": {
-    "bytes": 11131,
-    "sha256": "63d5d9edf3adb02a956509b2e497736f446cdfed02365bec2a6fc860979d35ee"
+    "bytes": 11925,
+    "sha256": "defd0a45b84f29dd3fa4778dd396114e7386a6ce89cfd4484cda21c45671bcc7"
   },
   "test_certificate.mjs": {
     "bytes": 1896,
@@ -179,13 +187,17 @@
     "bytes": 1587,
     "sha256": "1273ae937a4b8826d6b60616d9a8107c1b46109b1c097706165fc7c0486f3448"
   },
+  "test_mouse.mjs": {
+    "bytes": 3332,
+    "sha256": "faa256b2d53dd3761784b18cb90f3661389b2e1194ea889cbeaaed9ed15e2a8a"
+  },
   "test_routes.mjs": {
     "bytes": 934,
     "sha256": "4cf6d5c7931be0246d67671fd3414e894583fa1218f54a1c156872b1804042a2"
   },
   "test_world.mjs": {
-    "bytes": 5032,
-    "sha256": "e2c9567796dcc9eabc5897ec3bc5aff44254598b8a4bac3e5d500c7a24cfa527"
+    "bytes": 5211,
+    "sha256": "4a16699316bf5e212ddc544016526edc876384f45dbd63a2c5f1f6f675631496"
   },
   "three.module.js": {
     "bytes": 1314681,
@@ -200,7 +212,7 @@
     "sha256": "e799e942bd1b303228e2e7263cf07915af7280b72b03817c249991086dc455e0"
   },
   "world.js": {
-    "bytes": 24932,
-    "sha256": "761cf341d2ba0538b4cfc581de3efa145aee51047de5b2c04ecc8a2d786d9614"
+    "bytes": 26312,
+    "sha256": "ba16d074c7fa35ff360c86fa4931b87819243a67ddcfbd09a45dee7a67585798"
   }
 }

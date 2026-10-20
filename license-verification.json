@@ -1,0 +1,142 @@
+{
+  "brachiosaurus": {
+    "data": {
+      "print": {
+        "id": "1553840",
+        "name": "Brachiosaurus dinosaur",
+        "license": {
+          "id": "7",
+          "name": "Creative Commons — Public Domain"
+        },
+        "user": {
+          "publicUsername": "gabi123"
+        }
+      }
+    }
+  },
+  "ankylosaurus": {
+    "source_url": "https://opengameart.org/content/anklyosaurus",
+    "license": "CC0 1.0",
+    "verification": "Página de OpenGameArt o créditos heredados; ver CREDITS.md"
+  },
+  "pachycephalosaurus": {
+    "data": {
+      "print": {
+        "id": "400375",
+        "name": "Pachycephalosaurus Figurine",
+        "license": {
+          "id": "2",
+          "name": "Creative Commons — Attribution  — Share Alike"
+        },
+        "user": {
+          "publicUsername": "DragonArtist15"
+        }
+      }
+    }
+  },
+  "spinosaurus": {
+    "source_url": "https://opengameart.org/content/spinosaurus",
+    "license": "CC-BY-SA 4.0",
+    "verification": "Página de OpenGameArt o créditos heredados; ver CREDITS.md"
+  },
+  "sinosauropteryx": {
+    "data": {
+      "print": {
+        "id": "324349",
+        "name": "Sinosauropteryx Figurine",
+        "license": {
+          "id": "2",
+          "name": "Creative Commons — Attribution  — Share Alike"
+        },
+        "user": {
+          "publicUsername": "DragonArtist15"
+        }
+      }
+    }
+  },
+  "gallimimus": {
+    "data": {
+      "print": {
+        "id": "343962",
+        "name": "Galimimus figurine",
+        "license": {
+          "id": "2",
+          "name": "Creative Commons — Attribution  — Share Alike"
+        },
+        "user": {
+          "publicUsername": "DragonArtist15"
+        }
+      }
+    }
+  },
+  "dilophosaurus": {
+    "data": {
+      "print": {
+        "id": "413711",
+        "name": "Scientifically Accurate Dilophosaurus Statue",
+        "license": {
+          "id": "2",
+          "name": "Creative Commons — Attribution  — Share Alike"
+        },
+        "user": {
+          "publicUsername": "DragonArtist15"
+        }
+      }
+    }
+  },
+  "plesiosaurus": {
+    "data": {
+      "print": {
+        "id": "39379",
+        "name": "Plesiosaurus Updated",
+        "license": {
+          "id": "1",
+          "name": "Creative Commons — Attribution"
+        },
+        "user": {
+          "publicUsername": "MZ4250"
+        }
+      }
+    }
+  },
+  "mosasaurus": {
+    "data": {
+      "print": {
+        "id": "1534756",
+        "name": "Mosasaur",
+        "license": {
+          "id": "1",
+          "name": "Creative Commons — Attribution"
+        },
+        "user": {
+          "publicUsername": "MZ4250"
+        }
+      }
+    }
+  },
+  "albertosaurus": {
+    "source_url": "https://opengameart.org/content/albertosaurus",
+    "license": "CC0 1.0",
+    "verification": "Página de OpenGameArt o créditos heredados; ver CREDITS.md"
+  },
+  "pentaceratops": {
+    "source_url": "https://opengameart.org/content/pentaceratops",
+    "license": "CC0 1.0",
+    "verification": "Página de OpenGameArt o créditos heredados; ver CREDITS.md"
+  },
+  "beipiaosaurus": {
+    "data": {
+      "print": {
+        "id": "424475",
+        "name": "Beipiaosaurus Figurine",
+        "license": {
+          "id": "2",
+          "name": "Creative Commons — Attribution  — Share Alike"
+        },
+        "user": {
+          "publicUsername": "DragonArtist15"
+        }
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/brachiosaurus.glb
 - Licencia: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
 - Atribución requerida: no; crédito voluntario.
-- Archivo: `assets/models/brachiosaurus.glb`.
+- Archivo: `brachiosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Brachiosaurus model by gabi123 (CC0, via Printables; decimated STL->glTF with applied countershading). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -68,7 +68,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/ankylosaurus.glb
 - Licencia: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
 - Atribución requerida: no; crédito voluntario.
-- Archivo: `assets/models/ankylosaurus.glb`.
+- Archivo: `ankylosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Ankylosaurus model by Manicaeks (CC0, via OpenGameArt; textured glTF conversion). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -79,7 +79,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/pachycephalosaurus.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/pachycephalosaurus.glb`.
+- Archivo: `pachycephalosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Pachycephalosaurus model by DragonArtist15 (CC-BY-SA 4.0, via Printables; scientifically-accurate posed sculpt with scale + skin detail, decimated STL->glTF with applied countershading, same ShareAlike license). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -90,7 +90,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/spinosaurus.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/spinosaurus.glb`.
+- Archivo: `spinosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Spinosaurus model by Tuomo Untinen (CC-BY-SA 4.0, via OpenGameArt; decimated glTF conversion, same license). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -101,7 +101,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/sinosauropteryx.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/sinosauropteryx.glb`.
+- Archivo: `sinosauropteryx.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Sinosauropteryx Figurine model by DragonArtist15 (CC-BY-SA 4.0, via Printables; STL sculpt decimated 6.5M->35k tris, ShareAlike: re-hosted derivative remains under CC-BY-SA 4.0). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -112,7 +112,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/gallimimus.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/gallimimus.glb`.
+- Archivo: `gallimimus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Gallimimus model by DragonArtist15 (CC-BY-SA 4.0, via Printables; scientifically-accurate feathered sculpt, decimated STL->glTF with applied countershading, same ShareAlike license). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -123,7 +123,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/dilophosaurus.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/dilophosaurus.glb`.
+- Archivo: `dilophosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Dilophosaurus model by DragonArtist15 (CC-BY-SA 4.0, via Printables; scientifically-accurate posed sculpt with scale + feather detail, decimated STL->glTF with applied countershading, same ShareAlike license). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -134,7 +134,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/plesiosaurus.glb
 - Licencia: CC-BY 4.0 — https://creativecommons.org/licenses/by/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/plesiosaurus.glb`.
+- Archivo: `plesiosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Plesiosaurus model by MZ4250 (CC-BY 4.0, via Printables; STL->glTF conversion with applied countershading). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -145,7 +145,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/mosasaurus.glb
 - Licencia: CC-BY 4.0 — https://creativecommons.org/licenses/by/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/mosasaurus.glb`.
+- Archivo: `mosasaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Mosasaurus model by MZ4250 (CC-BY 4.0, via Printables; STL->glTF conversion with applied countershading). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -156,7 +156,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/albertosaurus.glb
 - Licencia: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
 - Atribución requerida: no; crédito voluntario.
-- Archivo: `assets/models/albertosaurus.glb`.
+- Archivo: `albertosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Albertosaurus model by Manicaeks (CC0, via OpenGameArt). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -167,7 +167,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/pentaceratops.glb
 - Licencia: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
 - Atribución requerida: no; crédito voluntario.
-- Archivo: `assets/models/pentaceratops.glb`.
+- Archivo: `pentaceratops.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Pentaceratops model by Manicaeks (CC0, via OpenGameArt). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 
@@ -178,7 +178,7 @@ Se revalidaron las cuatro licencias anteriores en la API de Sketchfab y las ocho
 - Copia GLB usada: https://gh-static.freetool.online/dinosaur-3d/beipiaosaurus.glb
 - Licencia: CC-BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
 - Atribución requerida: sí; conserva nombre, autor, fuente, licencia y modificaciones.
-- Archivo: `assets/models/beipiaosaurus.glb`.
+- Archivo: `beipiaosaurus.glb`.
 - Modificaciones: Archivo GLB conservado sin cambios de bytes. Escala, centrado y orientación en ejecución; clonación de individuos y selección de clips cuando existen. Conversión previa del distribuidor: Beipiaosaurus model by DragonArtist15 (CC-BY-SA 4.0, via Printables; scientifically-accurate posed feathered sculpt, decimated STL->glTF with applied countershading, same ShareAlike license). Ver asset-provenance.json para detalle de decimación, materiales o contrasombreado.
 - Animación disponible: ninguna; efecto de respiración en ejecución.
 

@@ -1,3 +1,11 @@
+# Versión 4.0.2 — archivos de animales
+
+Se verificaron peticiones HTTP reales al sitio publicado: varios GLB nuevos devolvían 404. Los recursos locales se reorganizaron en la raíz. Once pruebas completas aprobaron antes del ajuste final de focusAnimal; las siete pruebas de rutas/motor aprobaron después de añadir la comprobación de distancia segura y orientación hacia un animal. Se mantiene pendiente QA visual WebGL. Consulta LEEME_PRIMERO.md.
+
+# Parche 4.0.1 — cámara y mouse
+
+Se ejecutaron dos pruebas de regresión: test_mouse.mjs y test_flow.mjs. Ambas aprobaron. Se verificaron eventos simulados de mouse capturado, arrastre sin captura, rechazo de permisos, arrastre táctil, pausa y reglas CSS de entrada. No se ejecutó un navegador real. El informe siguiente conserva el resultado de la entrega 4.0 anterior al parche.
+
 # Validación de la entrega 4.0
 
 ## Ejecutado
