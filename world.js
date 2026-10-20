@@ -54,16 +54,20 @@ export class ExpeditionWorld{
  const seen=new Set();for(const a of this.actors){a.object.visible=!low||!seen.has(a.key);seen.add(a.key);}
  }
  installInput(){this.listeners=[];const listen=(el,event,fn)=>{el.addEventListener(event,fn);this.listeners.push(()=>el.removeEventListener(event,fn));};const canvas=this.renderer.domElement;let drag=null;canvas.tabIndex=0;canvas.setAttribute('aria-label','Escenario 3D. WASD para caminar; Espacio para saltar.');
- listen(canvas,'pointerdown',e=>{if(this.landing||!this.enabled)return;canvas.focus({preventScroll:true});if(e.pointerType==='mouse'&&!document.pointerLockElement)this.lock();drag={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);});
- listen(canvas,'pointermove',e=>{if(this.landing||!this.enabled)return;let dx=0,dy=0;if(document.pointerLockElement===canvas){dx=e.movementX;dy=e.movementY;}else if(drag?.id===e.pointerId){dx=e.clientX-drag.x;dy=e.clientY-drag.y;drag={id:e.pointerId,x:e.clientX,y:e.clientY};}this.yaw-=dx*.003;this.pitch=THREE.MathUtils.clamp(this.pitch-dy*.003,-1.1,1.1);});
- const release=()=>drag=null;listen(canvas,'pointerup',release);listen(canvas,'pointercancel',release);
+ const rotate=(dx,dy)=>{if(this.landing||!this.enabled||!Number.isFinite(dx)||!Number.isFinite(dy))return;this.yaw-=dx*.003;this.pitch=THREE.MathUtils.clamp(this.pitch-dy*.003,-1.1,1.1);};
+ listen(canvas,'pointerdown',e=>{if(this.landing||!this.enabled||(e.pointerType==='mouse'&&e.button!==0))return;canvas.focus({preventScroll:true});drag={id:e.pointerId,x:e.clientX,y:e.clientY};try{canvas.setPointerCapture?.(e.pointerId);}catch{}if(e.pointerType==='mouse'&&!document.pointerLockElement)void this.lock();});
+ // Pointer Lock exposes relative movement through mousemove in all supporting browsers.
+ listen(document,'mousemove',e=>{if(document.pointerLockElement===canvas)rotate(e.movementX,e.movementY);});
+ listen(canvas,'pointermove',e=>{if(document.pointerLockElement===canvas||drag?.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;drag={id:e.pointerId,x:e.clientX,y:e.clientY};rotate(dx,dy);});
+ const release=()=>drag=null;listen(canvas,'pointerup',release);listen(canvas,'pointercancel',release);listen(canvas,'lostpointercapture',release);listen(window,'blur',release);listen(document,'pointerlockchange',release);
+ this.resetLook=release;
  listen(window,'keydown',e=>{if(!this.enabled||this.landing||['INPUT','SELECT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.code==='Space'&&document.activeElement?.tagName==='BUTTON')return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault();if(e.code==='Space'&&!e.repeat)this.jump();this.keys[e.code]=true;});
  listen(window,'keyup',e=>this.keys[e.code]=false);listen(window,'blur',()=>this.clearInput());listen(document,'visibilitychange',()=>{if(document.hidden)this.clearInput();});
  listen(window,'resize',()=>{this.camera.aspect=innerWidth/innerHeight;this.camera.updateProjectionMatrix();this.renderer.setSize(innerWidth,innerHeight);});
  }
- clearInput(){this.keys={};this.stickX=0;this.stickY=0;this.jumpRequested=false;}
+ clearInput(){this.resetLook?.();this.keys={};this.stickX=0;this.stickY=0;this.jumpRequested=false;}
  jump(){if(this.enabled&&!this.landing&&this.body.grounded)this.jumpRequested=true;}
- lock(){try{const p=this.renderer.domElement.requestPointerLock?.();p?.catch?.(()=>{});}catch{}}
+ async lock(){if(this.landing||!this.enabled)return false;const canvas=this.renderer.domElement;if(!canvas.requestPointerLock)return false;try{const result=canvas.requestPointerLock();if(result?.then)await result;return true;}catch{return false;}}
  setPaused(paused){this.enabled=!paused;this.clearInput();if(paused&&document.pointerLockElement)document.exitPointerLock();}
  start(){this.landing=false;}
  camp(){this.teleport(0,53);this.yaw=0;}
