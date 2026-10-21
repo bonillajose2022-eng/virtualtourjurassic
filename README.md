@@ -1,126 +1,103 @@
-# JURASSIC ENGLISH VR: Open World Adventure
+# Jurassic English VR — Mundo abierto, salto y ayuda en español
 
-Versión 4.0.2. Proyecto estático para GitHub Pages. Se revisó y amplió el paquete anterior `Jurassic_Mundo_Abierto_v2.zip`. Se mantienen la clave de guardado local, XP, descubrimientos compatibles y las 25 preguntas A1 con sus identificadores. **Esta entrega no modifica automáticamente el repositorio ni su página publicada.**
+Actualización 3 / versión 2.0. Proyecto estático para el repositorio `virtualtourjurassic`, sin backend, claves ni servicios de pago. **Todos los archivos de ejecución están en la misma carpeta**, como quedaron en el repositorio del usuario; no se necesitan carpetas `vendor` ni `models`.
 
-La experiencia principal es caminar por una reserva de unos 470 m de diámetro, observar animales y encontrar actividades opcionales. Ninguna respuesta desbloquea o bloquea el desplazamiento. «VR» forma parte del nombre: no hay soporte WebXR con visor.
+## Cambios incluidos
 
-## Publicar en GitHub Pages
+- Mundo explorable de aproximadamente **470 metros de diámetro**, con bosque, colinas, rocas, río, lago, cascada ilustrativa, puentes y estación de campo. Es un mapa delimitado, no un mundo infinito.
+- Caminar, correr, mirar y **saltar con gravedad y aterrizaje**. No se permite un segundo salto en el aire.
+- Colisión básica con árboles y rocas. El río es superficial y se puede cruzar. Los puentes son elementos ambientales; no hay simulación de natación, escalada ni física compleja de cuerpos.
+- **Cuatro especies con modelos texturizados y animaciones:** Triceratops, T. rex, Stegosaurus y Allosaurus. Son modelos GLB reales con mallas, texturas y rig/animaciones, no dinosaurios creados con primitivas como sustitutos.
+- Varios individuos por época: 3 Triceratops y 2 T. rex en Cretácico; 3 Stegosaurus y 2 Allosaurus en Jurásico. Se cargan cinco individuos por época, no todos los modelos a la vez.
+- Dos expediciones temporales sobre la misma base de terreno. El selector cambia los dinosaurios y el ambiente; evita mezclar especies de épocas distintas. El terreno es ilustrativo, no una reconstrucción regional exacta.
+- Los animales usan animaciones disponibles, principalmente de reposo. No hay inteligencia artificial de manadas ni caminatas autónomas por todo el mapa. El T. rex conserva su animación artística de mordida.
+- Preguntas que aparecen **automáticamente al acercarse a un dinosaurio**. El juego se pausa mientras se responde. Se puede cerrar el panel para mirar al animal de cerca y seguir explorando.
+- Tras cerrar un encuentro no se repite el panel constantemente: es necesario alejarse y volver. Las cuatro preguntas de cada especie se pueden repetir sin duplicar XP.
+- **Nivel A1 / inicial:** frases cortas y dos opciones. Cada pregunta incluye, antes de responder, traducción y pista en español, incluso con la interfaz en inglés. La retroalimentación explica la respuesta en ambos idiomas.
+- Navegación libre, sin bloquear partes del mapa por los cuestionarios. Los cinco botones de zona son atajos opcionales. La evaluación final mantiene 25 preguntas, ahora más sencillas y con ayuda.
+- Minimap con flecha del jugador, puntos de dinosaurios, río y estación. Botón para ocultar/mostrar paneles.
+- XP, descubrimientos, diario, selección de idioma, ajustes y certificado PDF conservados. Brachiosaurus permanece como **ficha complementaria**, sin modelo 3D; no se cuenta entre las cuatro especies renderizadas.
 
-1. Descomprime `Jurassic_Completo_Animales_v4_0_2.zip`.
-2. Sube **todo su contenido a la raíz del repositorio**, manteniendo `docs`; los dieciséis modelos GLB van junto a `index.html`. `index.html` debe quedar directamente en la raíz, no dentro de una carpeta adicional. No subas el ZIP como si fuera la aplicación.
-3. En GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**. Si tu rama se llama de otra forma, selecciona esa rama.
-4. Espera la publicación y abre la URL que muestre GitHub. Para tu repositorio actual sería `https://bonillajose2022-eng.github.io/virtualtourjurassic/`, siempre que mantengas ese nombre y configuración. No se ha comprobado ni actualizado esa publicación desde esta entrega.
-5. Recarga con Ctrl+F5 después de actualizar. Conserva los dieciséis GLB: si falta uno, el juego informa el fallo; no lo sustituye por un animal geométrico.
+## Actualizar el repositorio actual
 
-Se incluye `.nojekyll`; con GitHub Desktop o Git se conserva también este archivo. No necesitas instalar Node para publicar. No subas `node_modules`. El juego usa rutas relativas, dependencias locales y ningún backend, clave o servicio de pago. GitHub Pages está disponible para repositorios públicos con GitHub Free; el código no necesita una plataforma de pago.
+1. Descarga y **extrae** el ZIP. No subas el ZIP como sustituto de los archivos.
+2. Abre `https://github.com/bonillajose2022-eng/virtualtourjurassic`.
+3. Pulsa **Add file → Upload files** y arrastra todos los archivos extraídos a la raíz del repositorio. Confirma reemplazar los existentes. Los nuevos GLB, `SkeletonUtils.js` y `physics.js` deben quedar junto a `index.html`.
+4. Pulsa **Commit changes**. Mantén Pages configurado en `main`, `/(root)`.
+5. Cuando termine la publicación, abre `https://bonillajose2022-eng.github.io/virtualtourjurassic/` y recarga con **Ctrl + F5**.
 
-Referencia oficial de publicación: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site .
+La aplicación usa un identificador de versión en los módulos para solicitar los archivos nuevos. La primera apertura de esta actualización vuelve a intentar el modo 3D, conserva XP, nombre, ajustes y descubrimientos, y prepara una evaluación final nueva porque las preguntas cambiaron. El resultado anterior se conserva localmente en `previousResult`; no se modifica su calificación para hacerla pasar por una evaluación nueva.
 
-Para probar en tu computador, dentro de la carpeta extraída ejecuta `python -m http.server 8000` y abre `http://localhost:8000`. No abras el HTML por doble clic: los módulos y GLB requieren HTTP. Esto no es un instalador offline; la voz depende del navegador.
+Si la página muestra un error de modelo, verifica que se hayan subido `triceratops.glb`, `stegosaurus.glb`, `allosaurus.glb` y `trex.glb`. Si solo se suben los JavaScript sin los GLB, no aparecerán las nuevas especies.
 
-## Empezar a jugar
+## Controles
 
-Pulsa **Iniciar / Continuar aventura**. Usa **Ver animal** para colocarte en un punto de observación seguro. El HUD muestra cuántos modelos se cargaron; los fallos aparecen en un panel con nombres de archivo y botón de reintento. Se cargan los modelos de tu reserva. Cierra la introducción y sigue el tutorial: caminar, saltar, abrir el mapa y encontrar un animal. Haz clic en el paisaje para capturar el cursor; si el navegador no permite capturarlo, arrastra para mirar.
-
-| Acción | Computador | Pantalla táctil |
+| Acción | Computador | Celular / tableta |
 | --- | --- | --- |
-| Caminar | W A S D o flechas | Joystick izquierdo |
-| Mirar | Mouse; arrastrar si no se captura | Arrastrar el paisaje fuera del joystick |
-| Correr | Mantener Shift o activar Correr | Activar Correr |
-| Saltar | Espacio | Saltar |
-| Interactuar | E | Observar |
-| Fotografiar | C o Foto | Foto |
-| Mapa completo | M | Mapa |
-| Pausa / liberar cursor | Escape | Menú |
-| Desatascarse | Menú → Regresar al campamento | Igual |
+| Caminar | WASD o flechas | Flechas en pantalla |
+| Mirar | Arrastrar el paisaje; captura opcional del mouse | Arrastrar el área libre |
+| Saltar | Barra espaciadora o botón JUMP / SALTAR | Botón SALTAR |
+| Correr | Mantener Shift o activar RUN | Activar CORRER |
+| Encuentro | Acercarse; preguntas automáticas | Acercarse; preguntas automáticas |
+| Interactuar | E o botón Observar | Botón Observar |
+| Cambiar de época | Selector superior; E cerca del portal de destino | Selector superior; Observar cerca del portal |
+| Revisar información | Diario de campo | Diario de campo |
 
-Solo se salta desde el suelo. Un panel pausa movimiento y animación. El primer encuentro se abre una sola vez por especie y guardado, estando en tierra; después usa E. Puedes cerrarlo y seguir caminando. En Ajustes, **Observación tranquila** desactiva esa apertura automática y reduce la velocidad de marcha de los animales animados. No hay persecuciones en ningún modo.
+Haz clic sobre el paisaje para enfocarlo antes de usar Espacio. Mientras un botón tiene foco, conserva su activación normal; el salto táctil también está disponible en computador. Esc cierra un diálogo o libera el mouse capturado.
 
-## Reservas y especies realmente incluidas
+## Contenido educativo
 
-Las reservas son expediciones separadas por tiempo y región. Comparten una base procedural ilustrativa; no son reconstrucciones paleobotánicas exactas. Las fechas son aproximadas, no una afirmación de que todos los taxones de una formación coexistieran durante toda su extensión temporal.
+`data.js` contiene las fichas, `periods`, el banco final y `encounterQuestions`. Cada pregunta sencilla tiene:
 
-| Reserva | Fecha aproximada | Región | Modelos incluidos |
-| --- | --- | --- | --- |
-| Morrison | Jurásico tardío, ~150 Ma | Oeste de Norteamérica | Stegosaurus, Allosaurus, Brachiosaurus |
-| Hell Creek | Cretácico tardío, ~67 Ma | Montana / Dakotas | Triceratops, Tyrannosaurus rex, Ankylosaurus, Pachycephalosaurus |
-| Kem Kem | Cretácico tardío, ~97 Ma | Marruecos | Spinosaurus |
-| Yixian | Cretácico temprano, ~125 Ma | Liaoning, China | Sinosauropteryx, Beipiaosaurus |
-| Nemegt | Cretácico tardío, ~70 Ma | Mongolia | Gallimimus |
-| Kayenta | Jurásico temprano, ~190–184 Ma | Arizona | Dilophosaurus |
-| Costa jurásica | Jurásico temprano, ~195 Ma | Dorset, Inglaterra | Plesiosaurus |
-| Maastricht | Cretácico tardío, ~67 Ma | Países Bajos | Mosasaurio (género no determinado) |
-| Horseshoe Canyon | Cretácico tardío, ~71 Ma | Alberta, Canadá | Albertosaurus |
-| Nuevo México | Cretácico tardío, ~75 Ma | Cuenca de San Juan | Pentaceratops |
+- `prompt`: oración o pregunta en inglés;
+- `translation`: traducción visible en español;
+- `hint`: pista en español antes de responder;
+- `options`: dos opciones;
+- `answer`: índice correcto, A=0 y B=1;
+- `explain`: explicación en inglés y en español.
 
-**16 archivos GLB diferentes: 14 dinosaurios, Plesiosaurus y un mosasaurio de género no determinado. Hay 15 taxones identificados a nivel de género; el mosasaurio genérico no se cuenta como una especie identificada.** No se cuentan fichas, fósiles, árboles o señales como animales. Plesiosaurus y los mosasaurios no son dinosaurios. No hay mamuts, félidos dientes de sable ni animales cenozoicos mezclados en estas reservas.
+Para cambiar el nivel, edita la sección “Open-world update” de `data.js`. La sección histórica inicial se conserva por compatibilidad; la capa A1 reemplaza el banco al cargar el módulo. No elimines las explicaciones ni cambies las 25 preguntas sin adaptar el certificado y el puntaje.
 
-De la lista orientativa no están incluidos: **Diplodocus, Apatosaurus, Ceratosaurus, Parasaurolophus, Edmontosaurus, Velociraptor y pterosaurios**. Las especies adicionales de esta entrega son Sinosauropteryx, Beipiaosaurus, Gallimimus, Dilophosaurus, Albertosaurus y Pentaceratops; se identifican por su propio modelo. No se rebautiza otro dinosaurio como Velociraptor. Para añadirlo, exige un modelo emplumado de tamaño apropiado, con licencia comprobada y reserva del Cretácico tardío de Mongolia.
+La práctica utiliza Present Simple como descripción de museo de hechos generales. No implica que estos dinosaurios no avianos vivan hoy. Los hechos de Allosaurus se basan en el Natural History Museum; su ficha enlaza la fuente. Colores, sonidos y movimientos exactos son reconstrucciones artísticas.
 
-Fuentes científicas y matices: [docs/SCIENCE.md](docs/SCIENCE.md). Créditos completos: [CREDITS.md](CREDITS.md).
+## Archivos principales
 
-## Actividades y recompensas
-
-- **Animal Encounter:** primera actividad por proximidad; al menos cinco preguntas por especie (93 en total), con inglés A1, dos opciones, pista previa en español, traducción opcional, escucha y explicación bilingüe. Los errores permiten reintentar sin penalización.
-- **Observe and Choose:** la quinta actividad de cada especie pide identificar una característica visible; no está aislada como una pantalla principal diferente.
-- **Photo Safari:** centra al animal a menos de 65 m y pulsa Foto. Se guarda una miniatura local por especie, actualizable y descargable. Fotografiar varias veces la misma especie no repite XP. La selección usa dirección y distancia; no hay validación de oclusión por árboles.
-- **Track Detective:** selecciona la misión, sigue las tres huellas doradas en orden con E y observa la especie del final. Las huellas son pistas artísticas, no moldes reales. Cambiar de reserva reinicia una ruta incompleta.
-- **Listen and Find:** selecciona la misión, escucha o lee la descripción y encuentra al animal de esa reserva. El texto y la pista española quedan disponibles; no depende exclusivamente del audio.
-- **Fossil Discovery:** encuentra el ámbar en la cueva (-70, 15), pulsa E y completa la actividad. Es un objeto ilustrativo de resina fosilizada.
-- **Explorer Journal:** se completa al observar animales. Leer una ficha ya descubierta no concede nuevos XP.
-- **Nature Missions:** fotografiar tres especies, observar un herbívoro, fotografiar un animal de reserva de río/mar y fotografiar un cuello largo. Cada objetivo muestra contador y recompensa; se puede seleccionar como misión activa.
-
-Un descubrimiento da 15 XP; una pregunta correcta nueva, 10 XP; una primera fotografía por especie, 15 XP. Las siete misiones dan sus recompensas una sola vez. Repetir la evaluación conserva las recompensas obtenidas.
-
-## Evaluación y certificado
-
-Las 25 preguntas A1 se distribuyen en **cinco estaciones de cinco preguntas**: Verb to Be, afirmaciones, negaciones, preguntas y características. Sigue el sendero con postes azules que parte del campamento; las estaciones aparecen en el mapa. E abre la estación cercana. Al terminar una, vuelve al mundo y camina a la siguiente. No se teletransporta al estudiante entre cuestionarios.
-
-Se guarda la primera respuesta de cada pregunta de evaluación. Se muestran respuesta correcta y explicación, incluso después de un error. En los encuentros de práctica sí se puede reintentar hasta acertar. Al finalizar: aciertos, errores, recomendaciones, revisión completa y certificado PDF con nombre, fecha y resultado. Se conserva el resultado anterior al repetir. El certificado es un reconocimiento local de aprendizaje, no una acreditación oficial.
-
-En modo de campo puedes abrir cada estación mediante una lista accesible. Este acceso alternativo no bloquea ni sustituye el recorrido 3D.
-
-## Guardado y actualización
-
-El progreso se guarda en `localStorage`, clave `jurassic-english-vr-v1`. La versión nueva migra el estado anterior sin borrar XP, nombre, descubrimientos o respuestas compatibles. Conserva campos históricos no usados en el HUD para no perder información. El guardado no se comparte entre dominios, perfiles ni dispositivos.
-
-Antes de cambiar de dominio o equipo usa **Menú → Exportar progreso**. Luego **Importar progreso** recupera un JSON después de confirmar el reemplazo. Reiniciar requiere confirmación. No se puede recuperar un guardado borrado si no se exportó. Si se llena el almacenamiento, el HUD informa que el guardado no está disponible; exporta el progreso antes de liberar espacio o reiniciar.
-
-## Arquitectura y edición
-
-| Archivo / carpeta | Responsabilidad |
+| Archivo | Función |
 | --- | --- |
-| `index.html`, `style.css` | Interfaz responsive, HUD, joystick y diálogos |
-| `script.js` | Actividades, diario, fotografías, audio, mapa y guardado |
-| `world.js` | Three.js, terreno, carga, instancias, estados de animales y render |
-| `physics.js` | Movimiento, salto, colisiones, alturas y puerta de proximidad |
-| `data.js` | Especies, reservas, misiones, preguntas de encuentro y migración |
-| `assessment-bank.js` | 25 preguntas finales con identificadores estables |
-| `certificate.js` | Canvas y PDF local, sin librería PDF externa |
-| `*.glb` | Los dieciséis modelos, incluidos con sus bytes |
-| `three.module.js`, `GLTFLoader.js`, `SkeletonUtils.js`, `BufferGeometryUtils.js` | Dependencias locales del navegador |
-| `docs/` | Guías, ciencia, licencias y evidencia de recursos |
-| `test_*.mjs`, `package*.json` | Pruebas de desarrollo; no se necesitan para jugar |
+| `index.html`, `style.css` | Interfaz y HUD responsive |
+| `script.js` | Encuentros, preguntas, idiomas, progreso y audio |
+| `world.js` | Terreno, entorno, instancias y cámara |
+| `physics.js` | Salto, movimiento, colisiones y control de proximidad |
+| `data.js` | Dinosaurios, épocas y contenido A1 |
+| `certificate.js` | Certificado PDF local |
+| `three.module.js`, `GLTFLoader.js`, `BufferGeometryUtils.js`, `SkeletonUtils.js` | Three.js local, carga y clonación de esqueletos |
+| `*.glb` | Los cuatro modelos incluidos |
+| `test_*.mjs` | Pruebas de desarrollo; no se usan para jugar |
+| `CREDITS.md`, `LICENSE`, `THREE-LICENSE.txt` | Atribuciones y licencias |
 
-Guías: [editar preguntas](docs/EDITAR_PREGUNTAS.md) y [añadir especies / animaciones](docs/ANADIR_ESPECIES.md).
+## Probar en local y desarrollar
 
-## Funciones implementadas y límites reales
+El sitio no requiere instalación de Node. Para abrirlo localmente sirve la carpeta por HTTP, por ejemplo:
 
-| Área | Estado |
-| --- | --- |
-| Exploración, carrera, salto, límites, colisión con obstáculos/animales y regreso al campamento | Implementados; física simple de altura y círculos, sin motor de cuerpos rígidos |
-| Quince taxones identificados y un mosasaurio, diez reservas, varios individuos de modelos animados | Integrados; al cargar Medium/High se duplican los cuatro modelos con clips, Low mantiene al menos uno de cada especie |
-| Animación | Cuatro especies con clips. Stegosaurus y Triceratops tienen marcha. Allosaurus tiene reposo y T. rex un ciclo artístico de mordida sin daño |
-| Doce modelos nuevos | Sin rig ni marcha. Respiración por escala muy sutil y giro lento; **no** se simula caminar deslizando una escultura |
-| Texturas y aspecto | Mezcla de cuatro modelos texturizados anteriores, modelos ligeros y esculturas con color de vértice / material. No se ofrece calidad uniforme de producción ni fotorrealismo |
-| Comer y beber | No hay un sistema completo de alimentación o bebida; no se inventan clips ausentes |
-| Grupos | Individuos con estados y tiempos independientes; no hay simulación científica de manadas |
-| Agua y cuevas | Río/lago/cascada ilustrativos, superficie de observación marina y entrada de cueva; sin natación, buceo, corriente o exploración subterránea extensa |
-| Proximidad y actividades | Primera apertura por especie, solo en tierra, cierre libre, práctica manual posterior |
-| Mapa | Jugador, campamento, portales, ruta final, lugares y objetivo activo; zonas de búsqueda hasta descubrir animales |
-| Accesibilidad | EN/ES, controles grandes, menús por teclado, voz y subtítulos, volumen, reducción de movimiento, modo tranquilo y modo de campo explícito |
-| Rendimiento | Instancias de vegetación, calidad, menos sombras en táctil, carga secuencial con bytes reales y liberación de modelos al viajar; sin LOD geométrico de dinosaurios ni FPS garantizados |
-| Pterosaurios, insectos animados y Velociraptor | Pendientes, no se muestran como incluidos |
-| Validación | Pruebas automáticas y PDF renderizado; **sin QA WebGL en navegador, FPS ni dispositivo táctil físico** |
+```bash
+python -m http.server 8000
+```
 
-Para ejecutar las pruebas: `npm ci` y `npm test`. Resultado y pendientes: [VALIDATION.md](VALIDATION.md).
+Abre `http://localhost:8000`. Evita abrir `index.html` con doble clic, porque los módulos y GLB necesitan HTTP.
+
+Solo para las pruebas automáticas:
+
+```bash
+npm ci
+npm test
+```
+
+El ZIP incluye las dependencias del navegador. Las dependencias de desarrollo se descargan únicamente al ejecutar `npm ci`.
+
+## Límites y validación
+
+Se ejecutaron **10 pruebas automáticas**, incluido el parseo real de los cuatro GLB y clonación de esqueletos en Node. Se probaron salto, límites, colisión básica, encuentros que no se repiten, preguntas A1, ayudas españolas, flujo DOM, evaluación final y XP sin duplicación. Lee `VALIDATION.md`.
+
+No hay un navegador gráfico habilitado para pruebas en este entorno. No se comprobó visualmente esta nueva versión en móvil, GPU o navegador real, ni se publicó el cambio en GitHub desde esta conversación. Deben verificarse encuadres, FPS, tacto y descarga del certificado después de subirla.
+
+El nombre conserva “VR”, pero se trata de exploración 3D convencional: **no se implementan sesiones WebXR con visor**. El paisaje procedural no es fotorrealismo completo. El progreso es local al navegador y no se sincroniza entre dispositivos.
